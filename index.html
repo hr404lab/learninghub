@@ -8,134 +8,7 @@
 <title>러닝허브</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
-<style>
-/* Layout: 교육 운영 사이클(수요조사→신청→평가→대시보드)을 상단 단계 탭으로, 본문은 단일 컬럼 760px */
-:root{
-  --bg:#F2F4F1; --surface:#FFFFFF; --ink:#16201C; --muted:#5C6963; --line:#D9E0DB;
-  --accent:#1F5C4A; --accent-ink:#FFFFFF; --accent-soft:#E0EBE5;
-  --signal:#B8661C; --signal-soft:#F6E7D6;
-  --good:#2E7D4F; --bad:#B23A2E; --bad-soft:#F6DEDA;
-  --f-display:"Hahmlet","Noto Serif KR",serif;
-  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-  --f-num:"IBM Plex Mono",ui-monospace,monospace;
-  --r:10px;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#101513; --surface:#18201C; --ink:#E6ECE8; --muted:#94A39B; --line:#2A3430;
-  --accent:#72C4A5; --accent-ink:#0D1A15; --accent-soft:#1C2E27;
-  --signal:#F0A65A; --signal-soft:#3A2A19; --good:#6CCB92; --bad:#F08A7E; --bad-soft:#3A1E1B; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#101513; --surface:#18201C; --ink:#E6ECE8; --muted:#94A39B; --line:#2A3430;
-  --accent:#72C4A5; --accent-ink:#0D1A15; --accent-soft:#1C2E27;
-  --signal:#F0A65A; --signal-soft:#3A2A19; --good:#6CCB92; --bad:#F08A7E; --bad-soft:#3A1E1B; color-scheme:dark}
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
-.wrap{max-width:760px;margin:0 auto}
-header.top{padding-block:24px 8px;display:flex;flex-direction:column;gap:6px}
-.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.brand h1{font-family:var(--f-display);font-weight:700;font-size:26px;margin:0;letter-spacing:-.01em;text-wrap:balance}
-.demo-tag{font-size:12px;color:var(--signal);background:var(--signal-soft);padding:2px 8px;border-radius:999px;white-space:nowrap}
-.sub{color:var(--muted);margin:0;font-size:14px}
-nav.steps{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);margin:12px 0 20px;padding-block:8px;border-bottom:1px solid var(--line)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
-.steps ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
-.steps a{display:flex;flex-direction:column;gap:0;padding:8px 6px;border-radius:8px;text-decoration:none;color:var(--muted);font-size:13px;font-weight:500;text-align:center}
-.steps a .n{font-family:var(--f-num);font-size:11px;letter-spacing:.06em}
-.steps a[aria-current="page"]{background:var(--accent);color:var(--accent-ink)}
-.steps a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-section.view{display:flex;flex-direction:column;gap:20px}
-h2{font-family:var(--f-display);font-weight:700;font-size:21px;margin:0;text-wrap:balance}
-h3{font-size:15px;font-weight:600;margin:0}
-.lead{color:var(--muted);margin:-8px 0 0;max-width:62ch}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:16px;min-width:0}
-.field{display:flex;flex-direction:column;gap:6px;min-width:0}
-.field>label,.field>.lbl{font-size:13px;font-weight:600}
-.hint{font-size:12px;color:var(--muted);font-weight:400}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media (max-width:520px){.row2{grid-template-columns:1fr}}
-input[type=text],select,textarea,input[type=date],input[type=number]{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%}
-textarea{min-height:72px;resize:vertical}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip input{position:absolute;opacity:0;pointer-events:none}
-.chip span{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;cursor:pointer;background:var(--bg)}
-.chip input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.chip input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
-.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
-.scale.s11{grid-template-columns:repeat(11,1fr)}
-.scale label span{display:block;text-align:center;padding:7px 0;border:1px solid var(--line);border-radius:6px;font-family:var(--f-num);font-size:13px;cursor:pointer;background:var(--bg)}
-.scale input{position:absolute;opacity:0;pointer-events:none}
-.scale input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.scale input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
-.scale-ends{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
-button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid transparent;padding:9px 16px;font-weight:600}
-.btn{background:var(--accent);color:var(--accent-ink)}
-.btn:disabled{opacity:.45;cursor:not-allowed}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-sm{padding:5px 10px;font-size:13px}
-.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.msg{font-size:13px;color:var(--good)}
-.msg.err{color:var(--bad)}
-.filter{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
-.filter button{background:var(--surface);border-color:var(--line);color:var(--muted);font-weight:500;font-size:13px;padding:5px 12px;border-radius:999px;white-space:nowrap}
-.filter button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.courses{display:flex;flex-direction:column;gap:10px}
-.course{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:start}
-@media (max-width:520px){.course{grid-template-columns:52px 1fr}.course .cta{grid-column:1/-1}}
-.date{display:flex;flex-direction:column;align-items:center;border:1px solid var(--line);border-radius:8px;padding:6px 0;background:var(--bg)}
-.date .m{font-size:11px;color:var(--muted)}
-.date .d{font-family:var(--f-num);font-size:20px;line-height:1.1}
-.date .w{font-size:11px;color:var(--muted)}
-.course .body{min-width:0;display:flex;flex-direction:column;gap:4px}
-.meta{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px}
-.cat{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.02em}
-.seat{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:4px}
-.seat .bar{flex:1;max-width:180px;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
-.seat .bar i{display:block;height:100%;background:var(--accent)}
-.seat .bar i.full{background:var(--signal)}
-.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
-.pill{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
-.pill.ok{background:var(--accent-soft);color:var(--accent)}
-.pill.wait{background:var(--signal-soft);color:var(--signal)}
-.pill.closed{background:var(--line);color:var(--muted)}
-.mine{display:flex;flex-direction:column;gap:8px}
-.mine li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-top:1px solid var(--line)}
-.mine ul{list-style:none;margin:0;padding:0}
-.empty{color:var(--muted);font-size:14px;padding:16px;border:1px dashed var(--line);border-radius:var(--r);text-align:center}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-@media (max-width:600px){.kpis{grid-template-columns:repeat(2,1fr)}}
-.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:2px;min-width:0}
-.kpi .k{font-size:12px;color:var(--muted)}
-.kpi .v{font-family:var(--f-num);font-size:24px;line-height:1.2}
-.kpi .v small{font-size:13px;color:var(--muted)}
-.kpi .s{font-size:12px;color:var(--muted)}
-.bars{display:flex;flex-direction:column;gap:8px}
-.brow{display:grid;grid-template-columns:120px 1fr 44px;gap:10px;align-items:center;font-size:13px}
-@media (max-width:520px){.brow{grid-template-columns:96px 1fr 40px}}
-.brow .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.brow .track{height:14px;background:var(--bg);border-radius:4px;overflow:hidden;position:relative}
-.brow .track i{display:block;height:100%;background:var(--accent);border-radius:4px}
-.brow .track i.gap{background:var(--signal)}
-.brow .v{text-align:right;font-family:var(--f-num);font-variant-numeric:tabular-nums}
-.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
-.legend b{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
-.tablewrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:520px;font-size:13px}
-th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
-th{font-size:12px;color:var(--muted);font-weight:600}
-td.r,th.r{text-align:right}
-.stack{display:flex;height:22px;border-radius:6px;overflow:hidden}
-.stack i{display:block;height:100%}
-.insight{background:var(--accent-soft);border-radius:var(--r);padding:14px 16px;font-size:14px;display:flex;flex-direction:column;gap:4px}
-.insight b{color:var(--accent)}
-.sheet{position:fixed;inset:0;background:rgba(10,16,13,.5);display:flex;align-items:flex-end;justify-content:center;z-index:20;
-  padding:16px max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
-.sheet .panel{width:100%;max-width:480px}
-@media (min-width:600px){.sheet{align-items:center}}
-.notice{font-size:13px;color:var(--signal);background:var(--signal-soft);margin-bottom:16px;padding:10px 12px;border-radius:8px}
-footer{margin-top:32px;font-size:12px;color:var(--muted)}
-@media (prefers-reduced-motion:no-preference){.seat .bar i,.brow .track i{transition:width .4s ease}}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -190,7 +63,7 @@ footer{margin-top:32px;font-size:12px;color:var(--muted)}
     <h2>교육 만족도 평가</h2>
     <p class="lead">수강한 과정을 평가해 주세요. 다음 차수 개선에 쓰입니다.</p>
     <form class="panel" id="fbForm" novalidate>
-      <div class="field"><label for="fb-course">수강한 과정</label><select id="fb-course" required></select></div>
+      <div class="field"><label for="fb-course">수강한 과정 <span class="hint">교육이 끝난 과정만 평가할 수 있습니다</span></label><select id="fb-course" required></select></div>
       <div class="field"><span class="lbl">전반적 만족도</span><div class="scale" id="fb-score"></div><div class="scale-ends"><span>매우 불만족</span><span>매우 만족</span></div></div>
       <div class="field"><span class="lbl">현업 적용 가능성</span><div class="scale" id="fb-apply"></div><div class="scale-ends"><span>거의 없음</span><span>바로 적용</span></div></div>
       <div class="field"><span class="lbl">동료에게 추천할 의향 <span class="hint">0~10</span></span><div class="scale s11" id="fb-nps"></div><div class="scale-ends"><span>전혀 아님</span><span>꼭 추천</span></div></div>
@@ -204,6 +77,7 @@ footer{margin-top:32px;font-size:12px;color:var(--muted)}
     <h2>교육 운영 대시보드</h2>
     <p class="lead">수요조사, 신청, 평가 데이터가 실시간으로 모입니다.</p>
     <div class="kpis" id="kpis"></div>
+    <p class="hint" id="kpiNote" style="margin:-12px 0 0" hidden></p>
     <div class="insight" id="insight" hidden></div>
 
     <div class="panel">
@@ -215,9 +89,10 @@ footer{margin-top:32px;font-size:12px;color:var(--muted)}
     <div class="panel">
       <h3>과정별 운영 현황</h3>
       <div class="tablewrap"><table>
-        <thead><tr><th>과정</th><th class="r">신청/정원</th><th class="r">대기</th><th class="r">만족도</th><th class="r">현업적용</th><th class="r">NPS</th></tr></thead>
+        <thead><tr><th>과정</th><th class="r">신청/정원</th><th class="r">대기</th><th class="r">응답률</th><th class="r">만족도</th><th class="r">현업적용</th><th class="r">NPS</th></tr></thead>
         <tbody id="courseTable"></tbody>
       </table></div>
+      <p class="hint" style="margin:0">응답률 50% 미만 과정은 표본이 적어 점수를 흐리게 표시합니다.</p>
     </div>
 
     <div class="row2">
@@ -246,7 +121,7 @@ footer{margin-top:32px;font-size:12px;color:var(--muted)}
     </div>
   </section>
 
-  <footer>hr404lab 포트폴리오 프로젝트입니다. 화면의 과정, 신청, 응답은 모두 예시 데이터입니다.</footer>
+  <footer>특정 회사의 공식 시스템이 아니며, 사내 교육 운영 방식을 제안하기 위해 개인이 만든 시연용 페이지입니다. 과정과 응답은 예시 데이터입니다.</footer>
 </div>
 
 <!-- 신청 시트 -->
@@ -262,187 +137,7 @@ footer{margin-top:32px;font-size:12px;color:var(--muted)}
   </form>
 </div>
 
-<script type="application/json" id="snap">{"courses":[{"title":"신임 팀장 리더십 스쿨","category":"리더십","format":"블렌디드","date":"2026-10-14","hours":16,"capacity":20,"instructor":"박서윤","open":true,"createdAt":1790000000000,"id":"c01"},{"title":"엑셀·파워BI로 하는 HR 데이터 분석","category":"데이터·AI 활용","format":"오프라인 집합","date":"2026-10-22","hours":8,"capacity":16,"instructor":"이도현","open":true,"createdAt":1790000000001,"id":"c02"},{"title":"생성형 AI 업무 활용 실습","category":"데이터·AI 활용","format":"온라인 라이브","date":"2026-11-12","hours":4,"capacity":24,"instructor":"정하린","open":true,"createdAt":1790000000002,"id":"c03"},{"title":"피드백 대화법","category":"커뮤니케이션","format":"오프라인 집합","date":"2026-11-19","hours":6,"capacity":15,"instructor":"김민재","open":true,"createdAt":1790000000003,"id":"c04"},{"title":"실무자를 위한 노동법 기초","category":"직무전문성","format":"온라인 라이브","date":"2026-11-26","hours":4,"capacity":30,"instructor":"최유진","open":true,"createdAt":1790000000004,"id":"c05"},{"title":"직무별 바이브코딩 실전 워크숍","category":"디지털 협업툴","format":"오프라인 집합","date":"2026-12-03","hours":6,"capacity":20,"instructor":"한지우","open":true,"createdAt":1790000000005,"id":"c06"},{"title":"직장 내 괴롭힘 예방교육","category":"법정의무교육","format":"이러닝","date":"2026-12-10","hours":1,"capacity":100,"instructor":"사내 강사","open":true,"createdAt":1790000000006,"id":"c07"},{"title":"중간관리자 코칭 리더십","category":"리더십","format":"오프라인 집합","date":"2026-12-15","hours":8,"capacity":12,"instructor":"박서윤","open":true,"createdAt":1790000000007,"id":"c08"}],"enrolls":[{"courseId":"c01","name":"서서연","dept":"IT","status":"확정","applicantId":"","createdAt":1790000400563,"id":"e001"},{"courseId":"c01","name":"최예린","dept":"R&D","status":"확정","applicantId":"","createdAt":1790000536517,"id":"e002"},{"courseId":"c01","name":"조서연","dept":"IT","status":"확정","applicantId":"","createdAt":1790000657333,"id":"e003"},{"courseId":"c01","name":"박지민","dept":"영업","status":"확정","applicantId":"","createdAt":1790000807455,"id":"e004"},{"courseId":"c01","name":"이지호","dept":"생산","status":"확정","applicantId":"","createdAt":1790000962574,"id":"e005"},{"courseId":"c01","name":"류서연","dept":"IT","status":"확정","applicantId":"","createdAt":1790001152389,"id":"e006"},{"courseId":"c01","name":"윤서연","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790001628338,"id":"e007"},{"courseId":"c01","name":"정채원","dept":"영업","status":"확정","applicantId":"","createdAt":1790001827981,"id":"e008"},{"courseId":"c01","name":"송서윤","dept":"생산","status":"확정","applicantId":"","createdAt":1790002011495,"id":"e009"},{"courseId":"c01","name":"조예린","dept":"생산","status":"확정","applicantId":"","createdAt":1790002179556,"id":"e010"},{"courseId":"c01","name":"박지호","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790002341719,"id":"e011"},{"courseId":"c01","name":"황채원","dept":"생산","status":"확정","applicantId":"","createdAt":1790002464215,"id":"e012"},{"courseId":"c01","name":"권지호","dept":"R&D","status":"확정","applicantId":"","createdAt":1790002972578,"id":"e013"},{"courseId":"c01","name":"윤서윤","dept":"영업","status":"확정","applicantId":"","createdAt":1790003507776,"id":"e014"},{"courseId":"c01","name":"임준서","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790003823729,"id":"e015"},{"courseId":"c01","name":"권수아","dept":"IT","status":"확정","applicantId":"","createdAt":1790004402896,"id":"e016"},{"courseId":"c01","name":"신서윤","dept":"인사","status":"확정","applicantId":"","createdAt":1790004539652,"id":"e017"},{"courseId":"c01","name":"황하은","dept":"인사","status":"확정","applicantId":"","createdAt":1790004958323,"id":"e018"},{"courseId":"c02","name":"박채원","dept":"IT","status":"확정","applicantId":"","createdAt":1790005059434,"id":"e019"},{"courseId":"c02","name":"오다은","dept":"영업","status":"확정","applicantId":"","createdAt":1790005448422,"id":"e020"},{"courseId":"c02","name":"권도윤","dept":"생산","status":"확정","applicantId":"","createdAt":1790006029223,"id":"e021"},{"courseId":"c02","name":"황도윤","dept":"IT","status":"확정","applicantId":"","createdAt":1790006187365,"id":"e022"},{"courseId":"c02","name":"임지호","dept":"R&D","status":"확정","applicantId":"","createdAt":1790006310981,"id":"e023"},{"courseId":"c02","name":"서예린","dept":"영업","status":"확정","applicantId":"","createdAt":1790006838269,"id":"e024"},{"courseId":"c02","name":"오서윤","dept":"IT","status":"확정","applicantId":"","createdAt":1790006921927,"id":"e025"},{"courseId":"c02","name":"조수아","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790007104710,"id":"e026"},{"courseId":"c02","name":"서건우","dept":"R&D","status":"확정","applicantId":"","createdAt":1790007300333,"id":"e027"},{"courseId":"c02","name":"권건우","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790007880958,"id":"e028"},{"courseId":"c02","name":"신채원","dept":"IT","status":"확정","applicantId":"","createdAt":1790008232293,"id":"e029"},{"courseId":"c02","name":"오건우","dept":"R&D","status":"확정","applicantId":"","createdAt":1790008584238,"id":"e030"},{"courseId":"c02","name":"강하준","dept":"인사","status":"확정","applicantId":"","createdAt":1790008886198,"id":"e031"},{"courseId":"c02","name":"김유나","dept":"생산","status":"확정","applicantId":"","createdAt":1790009189422,"id":"e032"},{"courseId":"c02","name":"김하준","dept":"영업","status":"확정","applicantId":"","createdAt":1790009440622,"id":"e033"},{"courseId":"c02","name":"홍지호","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790009939919,"id":"e034"},{"courseId":"c02","name":"안다은","dept":"IT","status":"대기","applicantId":"","createdAt":1790010334007,"id":"e035"},{"courseId":"c02","name":"송건우","dept":"마케팅","status":"대기","applicantId":"","createdAt":1790010450622,"id":"e036"},{"courseId":"c02","name":"최유나","dept":"영업","status":"대기","applicantId":"","createdAt":1790010928028,"id":"e037"},{"courseId":"c02","name":"박은우","dept":"경영지원","status":"대기","applicantId":"","createdAt":1790011407922,"id":"e038"},{"courseId":"c03","name":"한다은","dept":"인사","status":"확정","applicantId":"","createdAt":1790011929952,"id":"e039"},{"courseId":"c03","name":"류하준","dept":"인사","status":"확정","applicantId":"","createdAt":1790012045081,"id":"e040"},{"courseId":"c03","name":"홍민준","dept":"IT","status":"확정","applicantId":"","createdAt":1790012211474,"id":"e041"},{"courseId":"c03","name":"홍건우","dept":"IT","status":"확정","applicantId":"","createdAt":1790012345205,"id":"e042"},{"courseId":"c03","name":"오다은","dept":"생산","status":"확정","applicantId":"","createdAt":1790012560971,"id":"e043"},{"courseId":"c03","name":"최유나","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790013002824,"id":"e044"},{"courseId":"c03","name":"임도윤","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790013551449,"id":"e045"},{"courseId":"c03","name":"한시우","dept":"인사","status":"확정","applicantId":"","createdAt":1790013762567,"id":"e046"},{"courseId":"c03","name":"강준서","dept":"R&D","status":"확정","applicantId":"","createdAt":1790014324438,"id":"e047"},{"courseId":"c03","name":"안예린","dept":"인사","status":"확정","applicantId":"","createdAt":1790014408655,"id":"e048"},{"courseId":"c03","name":"김준서","dept":"생산","status":"확정","applicantId":"","createdAt":1790014622378,"id":"e049"},{"courseId":"c03","name":"박시우","dept":"IT","status":"확정","applicantId":"","createdAt":1790014994947,"id":"e050"},{"courseId":"c03","name":"오지민","dept":"IT","status":"확정","applicantId":"","createdAt":1790015439459,"id":"e051"},{"courseId":"c03","name":"윤다은","dept":"영업","status":"확정","applicantId":"","createdAt":1790016026575,"id":"e052"},{"courseId":"c03","name":"서지민","dept":"R&D","status":"확정","applicantId":"","createdAt":1790016291200,"id":"e053"},{"courseId":"c03","name":"오민준","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790016560829,"id":"e054"},{"courseId":"c03","name":"황시우","dept":"R&D","status":"확정","applicantId":"","createdAt":1790016650123,"id":"e055"},{"courseId":"c03","name":"오현우","dept":"생산","status":"확정","applicantId":"","createdAt":1790016913174,"id":"e056"},{"courseId":"c03","name":"오도윤","dept":"IT","status":"확정","applicantId":"","createdAt":1790017339671,"id":"e057"},{"courseId":"c04","name":"황은우","dept":"인사","status":"확정","applicantId":"","createdAt":1790017630842,"id":"e058"},{"courseId":"c04","name":"홍다은","dept":"인사","status":"확정","applicantId":"","createdAt":1790018044985,"id":"e059"},{"courseId":"c04","name":"오도윤","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790018106986,"id":"e060"},{"courseId":"c04","name":"조유나","dept":"IT","status":"확정","applicantId":"","createdAt":1790018292714,"id":"e061"},{"courseId":"c04","name":"한도윤","dept":"영업","status":"확정","applicantId":"","createdAt":1790018539907,"id":"e062"},{"courseId":"c04","name":"박서윤","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790019014973,"id":"e063"},{"courseId":"c04","name":"김하준","dept":"IT","status":"확정","applicantId":"","createdAt":1790019253234,"id":"e064"},{"courseId":"c04","name":"정다은","dept":"R&D","status":"확정","applicantId":"","createdAt":1790019801192,"id":"e065"},{"courseId":"c04","name":"오하준","dept":"생산","status":"확정","applicantId":"","createdAt":1790020358591,"id":"e066"},{"courseId":"c04","name":"최준서","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790020555937,"id":"e067"},{"courseId":"c04","name":"조은우","dept":"영업","status":"확정","applicantId":"","createdAt":1790020761951,"id":"e068"},{"courseId":"c04","name":"임준서","dept":"영업","status":"확정","applicantId":"","createdAt":1790020851304,"id":"e069"},{"courseId":"c04","name":"한시우","dept":"R&D","status":"확정","applicantId":"","createdAt":1790021163527,"id":"e070"},{"courseId":"c04","name":"이예린","dept":"R&D","status":"확정","applicantId":"","createdAt":1790021662893,"id":"e071"},{"courseId":"c04","name":"안하은","dept":"생산","status":"확정","applicantId":"","createdAt":1790022203309,"id":"e072"},{"courseId":"c04","name":"정준서","dept":"인사","status":"대기","applicantId":"","createdAt":1790022789326,"id":"e073"},{"courseId":"c04","name":"권서윤","dept":"경영지원","status":"대기","applicantId":"","createdAt":1790023384673,"id":"e074"},{"courseId":"c04","name":"정서윤","dept":"R&D","status":"대기","applicantId":"","createdAt":1790023448796,"id":"e075"},{"courseId":"c04","name":"최채원","dept":"마케팅","status":"대기","applicantId":"","createdAt":1790023657231,"id":"e076"},{"courseId":"c04","name":"안준서","dept":"영업","status":"대기","applicantId":"","createdAt":1790023781986,"id":"e077"},{"courseId":"c05","name":"최채원","dept":"R&D","status":"확정","applicantId":"","createdAt":1790024347910,"id":"e078"},{"courseId":"c05","name":"장서연","dept":"인사","status":"확정","applicantId":"","createdAt":1790024467492,"id":"e079"},{"courseId":"c05","name":"송민준","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790024629985,"id":"e080"},{"courseId":"c05","name":"홍준서","dept":"영업","status":"확정","applicantId":"","createdAt":1790024756432,"id":"e081"},{"courseId":"c05","name":"장현우","dept":"인사","status":"확정","applicantId":"","createdAt":1790025353472,"id":"e082"},{"courseId":"c05","name":"황준서","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790025946312,"id":"e083"},{"courseId":"c05","name":"장채원","dept":"생산","status":"확정","applicantId":"","createdAt":1790026265997,"id":"e084"},{"courseId":"c05","name":"정하은","dept":"R&D","status":"확정","applicantId":"","createdAt":1790026538426,"id":"e085"},{"courseId":"c05","name":"한도윤","dept":"영업","status":"확정","applicantId":"","createdAt":1790026725955,"id":"e086"},{"courseId":"c05","name":"조수아","dept":"영업","status":"확정","applicantId":"","createdAt":1790027038283,"id":"e087"},{"courseId":"c05","name":"정예린","dept":"IT","status":"확정","applicantId":"","createdAt":1790027226576,"id":"e088"},{"courseId":"c06","name":"정현우","dept":"영업","status":"확정","applicantId":"","createdAt":1790027436500,"id":"e089"},{"courseId":"c06","name":"최건우","dept":"R&D","status":"확정","applicantId":"","createdAt":1790027726754,"id":"e090"},{"courseId":"c06","name":"윤서윤","dept":"인사","status":"확정","applicantId":"","createdAt":1790028297683,"id":"e091"},{"courseId":"c06","name":"서주원","dept":"IT","status":"확정","applicantId":"","createdAt":1790028810166,"id":"e092"},{"courseId":"c06","name":"한도윤","dept":"인사","status":"확정","applicantId":"","createdAt":1790029311906,"id":"e093"},{"courseId":"c06","name":"송현우","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790029755635,"id":"e094"},{"courseId":"c06","name":"서주원","dept":"R&D","status":"확정","applicantId":"","createdAt":1790030277488,"id":"e095"},{"courseId":"c06","name":"박지우","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790030647294,"id":"e096"},{"courseId":"c06","name":"최도윤","dept":"IT","status":"확정","applicantId":"","createdAt":1790030946950,"id":"e097"},{"courseId":"c07","name":"강시우","dept":"영업","status":"확정","applicantId":"","createdAt":1790031285414,"id":"e098"},{"courseId":"c07","name":"장건우","dept":"R&D","status":"확정","applicantId":"","createdAt":1790031481262,"id":"e099"},{"courseId":"c07","name":"안지호","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790031697885,"id":"e100"},{"courseId":"c07","name":"박시우","dept":"R&D","status":"확정","applicantId":"","createdAt":1790032276523,"id":"e101"},{"courseId":"c07","name":"강하은","dept":"R&D","status":"확정","applicantId":"","createdAt":1790032396843,"id":"e102"},{"courseId":"c07","name":"김도윤","dept":"영업","status":"확정","applicantId":"","createdAt":1790032532774,"id":"e103"},{"courseId":"c08","name":"윤도윤","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790032865982,"id":"e104"},{"courseId":"c08","name":"권민준","dept":"IT","status":"확정","applicantId":"","createdAt":1790033203278,"id":"e105"},{"courseId":"c08","name":"신시우","dept":"IT","status":"확정","applicantId":"","createdAt":1790033618904,"id":"e106"},{"courseId":"c08","name":"윤지우","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790033814406,"id":"e107"},{"courseId":"c08","name":"강은우","dept":"영업","status":"확정","applicantId":"","createdAt":1790034043697,"id":"e108"},{"courseId":"c08","name":"안은우","dept":"생산","status":"확정","applicantId":"","createdAt":1790034430844,"id":"e109"},{"courseId":"c08","name":"강시우","dept":"영업","status":"확정","applicantId":"","createdAt":1790034794889,"id":"e110"},{"courseId":"c05","name":"신하은","dept":"생산","status":"확정","applicantId":"","createdAt":1790080232962,"id":"e111"},{"courseId":"c05","name":"조유나","dept":"R&D","status":"확정","applicantId":"","createdAt":1790080795335,"id":"e112"},{"courseId":"c05","name":"강준서","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790081392684,"id":"e113"},{"courseId":"c05","name":"김민준","dept":"영업","status":"확정","applicantId":"","createdAt":1790082279385,"id":"e114"},{"courseId":"c05","name":"신도윤","dept":"인사","status":"확정","applicantId":"","createdAt":1790082953182,"id":"e115"},{"courseId":"c05","name":"윤지민","dept":"생산","status":"확정","applicantId":"","createdAt":1790083800998,"id":"e116"},{"courseId":"c05","name":"신다은","dept":"영업","status":"확정","applicantId":"","createdAt":1790084319074,"id":"e117"},{"courseId":"c05","name":"송유나","dept":"생산","status":"확정","applicantId":"","createdAt":1790084723981,"id":"e118"},{"courseId":"c06","name":"오민준","dept":"인사","status":"확정","applicantId":"","createdAt":1790085464314,"id":"e119"},{"courseId":"c06","name":"최민준","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790085617075,"id":"e120"},{"courseId":"c06","name":"한건우","dept":"마케팅","status":"확정","applicantId":"","createdAt":1790086255891,"id":"e121"},{"courseId":"c06","name":"이유나","dept":"IT","status":"확정","applicantId":"","createdAt":1790086511879,"id":"e122"},{"courseId":"c06","name":"박은우","dept":"인사","status":"확정","applicantId":"","createdAt":1790086818153,"id":"e123"},{"courseId":"c06","name":"류도윤","dept":"인사","status":"확정","applicantId":"","createdAt":1790087568111,"id":"e124"},{"courseId":"c06","name":"송건우","dept":"인사","status":"확정","applicantId":"","createdAt":1790088127574,"id":"e125"},{"courseId":"c07","name":"송하은","dept":"영업","status":"확정","applicantId":"","createdAt":1790088340824,"id":"e126"},{"courseId":"c07","name":"안건우","dept":"영업","status":"확정","applicantId":"","createdAt":1790088874069,"id":"e127"},{"courseId":"c07","name":"서시우","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790089442054,"id":"e128"},{"courseId":"c07","name":"강유나","dept":"경영지원","status":"확정","applicantId":"","createdAt":1790089599846,"id":"e129"},{"courseId":"c07","name":"송다은","dept":"R&D","status":"확정","applicantId":"","createdAt":1790089733368,"id":"e130"}],"surveys":[{"dept":"마케팅","level":"사원","topics":["리더십","커리어 개발","데이터·AI 활용"],"format":"온라인 라이브","timing":"4분기","comment":"부서 간 협업 방식 개선","createdAt":1790005000000,"id":"s001"},{"dept":"영업","level":"사원","topics":["조직문화","커뮤니케이션","데이터·AI 활용"],"format":"블렌디드","timing":"2분기","comment":"","createdAt":1790008600000,"id":"s002"},{"dept":"경영지원","level":"과장","topics":["리더십","커뮤니케이션","데이터·AI 활용"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790012200000,"id":"s003"},{"dept":"인사","level":"사원","topics":["커뮤니케이션","디지털 협업툴"],"format":"오프라인 집합","timing":"3분기","comment":"사내 경력경로가 궁금합니다","createdAt":1790015800000,"id":"s004"},{"dept":"인사","level":"사원","topics":["직무전문성","리더십","데이터·AI 활용"],"format":"온라인 라이브","timing":"4분기","comment":"","createdAt":1790019400000,"id":"s005"},{"dept":"경영지원","level":"사원","topics":["데이터·AI 활용","커리어 개발"],"format":"오프라인 집합","timing":"4분기","comment":"","createdAt":1790023000000,"id":"s006"},{"dept":"생산","level":"부장","topics":["조직문화","커뮤니케이션","데이터·AI 활용"],"format":"블렌디드","timing":"2분기","comment":"","createdAt":1790026600000,"id":"s007"},{"dept":"영업","level":"과장","topics":["직무전문성","디지털 협업툴"],"format":"이러닝","timing":"1분기","comment":"","createdAt":1790030200000,"id":"s008"},{"dept":"생산","level":"과장","topics":["조직문화","커리어 개발"],"format":"온라인 라이브","timing":"1분기","comment":"","createdAt":1790033800000,"id":"s009"},{"dept":"인사","level":"과장","topics":["데이터·AI 활용","리더십"],"format":"블렌디드","timing":"4분기","comment":"부서 간 협업 방식 개선","createdAt":1790037400000,"id":"s010"},{"dept":"영업","level":"사원","topics":["리더십","커리어 개발","커뮤니케이션"],"format":"블렌디드","timing":"1분기","comment":"","createdAt":1790041000000,"id":"s011"},{"dept":"IT","level":"사원","topics":["디지털 협업툴","리더십","커뮤니케이션"],"format":"이러닝","timing":"4분기","comment":"부서 간 협업 방식 개선","createdAt":1790044600000,"id":"s012"},{"dept":"생산","level":"과장","topics":["리더십","커뮤니케이션"],"format":"오프라인 집합","timing":"2분기","comment":"사내 경력경로가 궁금합니다","createdAt":1790048200000,"id":"s013"},{"dept":"경영지원","level":"대리","topics":["커뮤니케이션","커리어 개발"],"format":"온라인 라이브","timing":"1분기","comment":"","createdAt":1790051800000,"id":"s014"},{"dept":"생산","level":"사원","topics":["디지털 협업툴","커리어 개발"],"format":"블렌디드","timing":"4분기","comment":"보고서 작성 역량이 필요합니다","createdAt":1790055400000,"id":"s015"},{"dept":"인사","level":"차장","topics":["디지털 협업툴","커리어 개발","커뮤니케이션"],"format":"블렌디드","timing":"1분기","comment":"","createdAt":1790059000000,"id":"s016"},{"dept":"생산","level":"차장","topics":["데이터·AI 활용","커리어 개발","직무전문성"],"format":"온라인 라이브","timing":"1분기","comment":"사내 경력경로가 궁금합니다","createdAt":1790062600000,"id":"s017"},{"dept":"인사","level":"사원","topics":["디지털 협업툴","조직문화"],"format":"온라인 라이브","timing":"4분기","comment":"","createdAt":1790066200000,"id":"s018"},{"dept":"IT","level":"대리","topics":["데이터·AI 활용","직무전문성"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790069800000,"id":"s019"},{"dept":"영업","level":"사원","topics":["데이터·AI 활용","리더십","커뮤니케이션"],"format":"온라인 라이브","timing":"1분기","comment":"사내 경력경로가 궁금합니다","createdAt":1790073400000,"id":"s020"},{"dept":"영업","level":"대리","topics":["커뮤니케이션","리더십","데이터·AI 활용"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790077000000,"id":"s021"},{"dept":"R&D","level":"사원","topics":["조직문화","커리어 개발"],"format":"블렌디드","timing":"4분기","comment":"부서 간 협업 방식 개선","createdAt":1790080600000,"id":"s022"},{"dept":"인사","level":"사원","topics":["데이터·AI 활용","커뮤니케이션","리더십"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790084200000,"id":"s023"},{"dept":"인사","level":"과장","topics":["커뮤니케이션","디지털 협업툴","조직문화"],"format":"오프라인 집합","timing":"4분기","comment":"","createdAt":1790087800000,"id":"s024"},{"dept":"경영지원","level":"사원","topics":["조직문화","데이터·AI 활용"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790091400000,"id":"s025"},{"dept":"R&D","level":"차장","topics":["커뮤니케이션","데이터·AI 활용"],"format":"온라인 라이브","timing":"2분기","comment":"","createdAt":1790095000000,"id":"s026"},{"dept":"인사","level":"과장","topics":["직무전문성","디지털 협업툴","커리어 개발"],"format":"온라인 라이브","timing":"2분기","comment":"팀원 면담 스킬을 배우고 싶어요","createdAt":1790098600000,"id":"s027"},{"dept":"인사","level":"사원","topics":["커뮤니케이션","조직문화"],"format":"이러닝","timing":"4분기","comment":"","createdAt":1790102200000,"id":"s028"},{"dept":"인사","level":"과장","topics":["리더십","조직문화","디지털 협업툴"],"format":"오프라인 집합","timing":"2분기","comment":"","createdAt":1790105800000,"id":"s029"},{"dept":"생산","level":"과장","topics":["데이터·AI 활용","디지털 협업툴"],"format":"오프라인 집합","timing":"2분기","comment":"","createdAt":1790109400000,"id":"s030"},{"dept":"R&D","level":"사원","topics":["리더십","커뮤니케이션"],"format":"이러닝","timing":"1분기","comment":"팀원 면담 스킬을 배우고 싶어요","createdAt":1790113000000,"id":"s031"},{"dept":"마케팅","level":"사원","topics":["커뮤니케이션","커리어 개발"],"format":"블렌디드","timing":"1분기","comment":"보고서 작성 역량이 필요합니다","createdAt":1790116600000,"id":"s032"},{"dept":"생산","level":"부장","topics":["커리어 개발","직무전문성"],"format":"오프라인 집합","timing":"2분기","comment":"AI로 반복 업무를 줄이고 싶습니다","createdAt":1790090000000,"id":"s033"},{"dept":"인사","level":"사원","topics":["직무전문성","커리어 개발","커뮤니케이션"],"format":"오프라인 집합","timing":"2분기","comment":"","createdAt":1790093600000,"id":"s034"},{"dept":"R&D","level":"부장","topics":["데이터·AI 활용","리더십","커리어 개발"],"format":"온라인 라이브","timing":"2분기","comment":"","createdAt":1790097200000,"id":"s035"},{"dept":"생산","level":"대리","topics":["직무전문성","디지털 협업툴"],"format":"오프라인 집합","timing":"2분기","comment":"","createdAt":1790100800000,"id":"s036"},{"dept":"경영지원","level":"차장","topics":["리더십","조직문화","디지털 협업툴"],"format":"오프라인 집합","timing":"3분기","comment":"후배 육성 방법을 배우고 싶어요","createdAt":1790104400000,"id":"s037"},{"dept":"인사","level":"대리","topics":["조직문화","커뮤니케이션"],"format":"블렌디드","timing":"2분기","comment":"","createdAt":1790108000000,"id":"s038"},{"dept":"인사","level":"부장","topics":["디지털 협업툴","리더십","커뮤니케이션"],"format":"온라인 라이브","timing":"4분기","comment":"","createdAt":1790111600000,"id":"s039"},{"dept":"영업","level":"과장","topics":["직무전문성","데이터·AI 활용"],"format":"온라인 라이브","timing":"4분기","comment":"후배 육성 방법을 배우고 싶어요","createdAt":1790115200000,"id":"s040"},{"dept":"인사","level":"과장","topics":["커리어 개발","커뮤니케이션"],"format":"오프라인 집합","timing":"2분기","comment":"","createdAt":1790118800000,"id":"s041"},{"dept":"IT","level":"부장","topics":["커리어 개발","직무전문성","커뮤니케이션"],"format":"온라인 라이브","timing":"4분기","comment":"","createdAt":1790122400000,"id":"s042"},{"dept":"경영지원","level":"사원","topics":["데이터·AI 활용","조직문화"],"format":"이러닝","timing":"2분기","comment":"","createdAt":1790126000000,"id":"s043"},{"dept":"영업","level":"대리","topics":["커뮤니케이션","데이터·AI 활용"],"format":"온라인 라이브","timing":"4분기","comment":"실무 사례 중심이면 좋겠습니다","createdAt":1790129600000,"id":"s044"},{"dept":"IT","level":"사원","topics":["데이터·AI 활용","직무전문성","커리어 개발"],"format":"이러닝","timing":"1분기","comment":"","createdAt":1790133200000,"id":"s045"},{"dept":"IT","level":"대리","topics":["디지털 협업툴","리더십","조직문화"],"format":"블렌디드","timing":"2분기","comment":"후배 육성 방법을 배우고 싶어요","createdAt":1790136800000,"id":"s046"},{"dept":"인사","level":"대리","topics":["커리어 개발","직무전문성","리더십"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790140400000,"id":"s047"},{"dept":"생산","level":"과장","topics":["디지털 협업툴","커리어 개발","데이터·AI 활용"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790144000000,"id":"s048"},{"dept":"IT","level":"대리","topics":["커뮤니케이션","법정의무교육","커리어 개발"],"format":"오프라인 집합","timing":"3분기","comment":"실무 사례 중심이면 좋겠습니다","createdAt":1790147600000,"id":"s049"},{"dept":"경영지원","level":"차장","topics":["리더십","직무전문성","조직문화"],"format":"이러닝","timing":"4분기","comment":"","createdAt":1790151200000,"id":"s050"},{"dept":"생산","level":"대리","topics":["리더십","조직문화","디지털 협업툴"],"format":"블렌디드","timing":"1분기","comment":"실무 사례 중심이면 좋겠습니다","createdAt":1790154800000,"id":"s051"},{"dept":"경영지원","level":"사원","topics":["리더십","조직문화"],"format":"이러닝","timing":"4분기","comment":"","createdAt":1790158400000,"id":"s052"},{"dept":"영업","level":"대리","topics":["커뮤니케이션","조직문화","직무전문성"],"format":"이러닝","timing":"1분기","comment":"","createdAt":1790162000000,"id":"s053"},{"dept":"R&D","level":"과장","topics":["데이터·AI 활용","디지털 협업툴","직무전문성"],"format":"오프라인 집합","timing":"4분기","comment":"","createdAt":1790165600000,"id":"s054"},{"dept":"마케팅","level":"대리","topics":["커리어 개발","커뮤니케이션","디지털 협업툴"],"format":"이러닝","timing":"1분기","comment":"","createdAt":1790169200000,"id":"s055"},{"dept":"R&D","level":"사원","topics":["데이터·AI 활용","커뮤니케이션","조직문화"],"format":"온라인 라이브","timing":"1분기","comment":"","createdAt":1790172800000,"id":"s056"},{"dept":"경영지원","level":"부장","topics":["법정의무교육","직무전문성","디지털 협업툴"],"format":"오프라인 집합","timing":"4분기","comment":"실무 사례 중심이면 좋겠습니다","createdAt":1790176400000,"id":"s057"},{"dept":"영업","level":"사원","topics":["직무전문성","커리어 개발","데이터·AI 활용"],"format":"오프라인 집합","timing":"3분기","comment":"","createdAt":1790180000000,"id":"s058"},{"dept":"생산","level":"과장","topics":["커리어 개발","데이터·AI 활용","커뮤니케이션"],"format":"이러닝","timing":"2분기","comment":"","createdAt":1790183600000,"id":"s059"},{"dept":"R&D","level":"사원","topics":["조직문화","디지털 협업툴","법정의무교육"],"format":"오프라인 집합","timing":"4분기","comment":"","createdAt":1790187200000,"id":"s060"},{"dept":"IT","level":"과장","topics":["데이터·AI 활용","리더십","직무전문성"],"format":"블렌디드","timing":"3분기","comment":"","createdAt":1790190800000,"id":"s061"},{"dept":"마케팅","level":"과장","topics":["커리어 개발","리더십"],"format":"이러닝","timing":"2분기","comment":"","createdAt":1790194400000,"id":"s062"},{"dept":"영업","level":"차장","topics":["데이터·AI 활용","커뮤니케이션","디지털 협업툴"],"format":"온라인 라이브","timing":"2분기","comment":"","createdAt":1790198000000,"id":"s063"},{"dept":"인사","level":"대리","topics":["커리어 개발","리더십","커뮤니케이션"],"format":"블렌디드","timing":"2분기","comment":"실무 사례 중심이면 좋겠습니다","createdAt":1790201600000,"id":"s064"},{"dept":"R&D","level":"과장","topics":["커리어 개발","디지털 협업툴","리더십"],"format":"오프라인 집합","timing":"2분기","comment":"","createdAt":1790205200000,"id":"s065"},{"dept":"생산","level":"대리","topics":["디지털 협업툴","커리어 개발"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790208800000,"id":"s066"},{"dept":"영업","level":"과장","topics":["데이터·AI 활용","직무전문성","커뮤니케이션"],"format":"오프라인 집합","timing":"1분기","comment":"","createdAt":1790212400000,"id":"s067"},{"dept":"R&D","level":"차장","topics":["커리어 개발","데이터·AI 활용"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790216000000,"id":"s068"},{"dept":"마케팅","level":"사원","topics":["리더십","커리어 개발"],"format":"블렌디드","timing":"4분기","comment":"","createdAt":1790219600000,"id":"s069"},{"dept":"생산","level":"사원","topics":["데이터·AI 활용","직무전문성"],"format":"오프라인 집합","timing":"2분기","comment":"","createdAt":1790223200000,"id":"s070"},{"dept":"인사","level":"대리","topics":["리더십","직무전문성","데이터·AI 활용"],"format":"이러닝","timing":"2분기","comment":"","createdAt":1790226800000,"id":"s071"},{"dept":"IT","level":"차장","topics":["직무전문성","디지털 협업툴","데이터·AI 활용"],"format":"블렌디드","timing":"3분기","comment":"","createdAt":1790230400000,"id":"s072"},{"dept":"생산","level":"차장","topics":["법정의무교육","커리어 개발"],"format":"블렌디드","timing":"4분기","comment":"실무 사례 중심이면 좋겠습니다","createdAt":1790234000000,"id":"s073"},{"dept":"생산","level":"사원","topics":["직무전문성","리더십","데이터·AI 활용"],"format":"오프라인 집합","timing":"4분기","comment":"","createdAt":1790237600000,"id":"s074"},{"dept":"인사","level":"사원","topics":["커리어 개발","조직문화"],"format":"온라인 라이브","timing":"3분기","comment":"글로벌 법인과 협업하는 법","createdAt":1790241200000,"id":"s075"},{"dept":"마케팅","level":"과장","topics":["직무전문성","리더십","커뮤니케이션"],"format":"온라인 라이브","timing":"3분기","comment":"","createdAt":1790244800000,"id":"s076"},{"dept":"생산","level":"과장","topics":["리더십","조직문화"],"format":"블렌디드","timing":"2분기","comment":"","createdAt":1790248400000,"id":"s077"},{"dept":"생산","level":"대리","topics":["커리어 개발","직무전문성"],"format":"오프라인 집합","timing":"4분기","comment":"","createdAt":1790252000000,"id":"s078"},{"dept":"인사","level":"대리","topics":["디지털 협업툴","데이터·AI 활용","커뮤니케이션"],"format":"온라인 라이브","timing":"4분기","comment":"글로벌 법인과 협업하는 법","createdAt":1790255600000,"id":"s079"},{"dept":"인사","level":"사원","topics":["리더십","커리어 개발","디지털 협업툴"],"format":"블렌디드","timing":"4분기","comment":"후배 육성 방법을 배우고 싶어요","createdAt":1790259200000,"id":"s080"},{"dept":"경영지원","level":"사원","topics":["데이터·AI 활용","직무전문성","조직문화"],"format":"이러닝","timing":"3분기","comment":"","createdAt":1790262800000,"id":"s081"},{"dept":"IT","level":"과장","topics":["데이터·AI 활용","디지털 협업툴","커리어 개발"],"format":"이러닝","timing":"1분기","comment":"AI로 반복 업무를 줄이고 싶습니다","createdAt":1790266400000,"id":"s082"}],"feedback":[{"courseId":"c01","score":5,"apply":5,"nps":8,"comment":"바로 써먹을 수 있는 내용","createdAt":1790009060000,"id":"f001"},{"courseId":"c01","score":5,"apply":4,"nps":9,"comment":"실습 시간이 더 있었으면","createdAt":1790009120000,"id":"f002"},{"courseId":"c01","score":5,"apply":4,"nps":10,"comment":"강사님 설명이 명확했습니다","createdAt":1790009180000,"id":"f003"},{"courseId":"c01","score":5,"apply":4,"nps":5,"comment":"","createdAt":1790009240000,"id":"f004"},{"courseId":"c01","score":5,"apply":5,"nps":6,"comment":"실습 시간이 더 있었으면","createdAt":1790009300000,"id":"f005"},{"courseId":"c01","score":5,"apply":5,"nps":7,"comment":"사례 중심이라 좋았습니다","createdAt":1790009360000,"id":"f006"},{"courseId":"c01","score":5,"apply":5,"nps":8,"comment":"","createdAt":1790009420000,"id":"f007"},{"courseId":"c01","score":4,"apply":5,"nps":10,"comment":"","createdAt":1790009480000,"id":"f008"},{"courseId":"c01","score":3,"apply":5,"nps":10,"comment":"바로 써먹을 수 있는 내용","createdAt":1790009540000,"id":"f009"},{"courseId":"c01","score":5,"apply":4,"nps":7,"comment":"실습 시간이 더 있었으면","createdAt":1790009600000,"id":"f010"},{"courseId":"c01","score":4,"apply":5,"nps":6,"comment":"","createdAt":1790009660000,"id":"f011"},{"courseId":"c01","score":4,"apply":4,"nps":10,"comment":"","createdAt":1790009720000,"id":"f012"},{"courseId":"c01","score":4,"apply":4,"nps":10,"comment":"실습 시간이 더 있었으면","createdAt":1790009780000,"id":"f013"},{"courseId":"c01","score":5,"apply":4,"nps":7,"comment":"","createdAt":1790009840000,"id":"f014"},{"courseId":"c01","score":4,"apply":4,"nps":9,"comment":"실습 시간이 더 있었으면","createdAt":1790009900000,"id":"f015"},{"courseId":"c02","score":4,"apply":4,"nps":9,"comment":"강사님 설명이 명확했습니다","createdAt":1790009960000,"id":"f016"},{"courseId":"c02","score":3,"apply":2,"nps":10,"comment":"바로 써먹을 수 있는 내용","createdAt":1790010020000,"id":"f017"},{"courseId":"c02","score":3,"apply":4,"nps":10,"comment":"강사님 설명이 명확했습니다","createdAt":1790010080000,"id":"f018"},{"courseId":"c02","score":4,"apply":3,"nps":8,"comment":"","createdAt":1790010140000,"id":"f019"},{"courseId":"c02","score":5,"apply":3,"nps":7,"comment":"사례 중심이라 좋았습니다","createdAt":1790010200000,"id":"f020"},{"courseId":"c02","score":3,"apply":3,"nps":5,"comment":"","createdAt":1790010260000,"id":"f021"},{"courseId":"c02","score":5,"apply":2,"nps":7,"comment":"","createdAt":1790010320000,"id":"f022"},{"courseId":"c02","score":3,"apply":3,"nps":8,"comment":"바로 써먹을 수 있는 내용","createdAt":1790010380000,"id":"f023"},{"courseId":"c02","score":5,"apply":3,"nps":5,"comment":"강사님 설명이 명확했습니다","createdAt":1790010440000,"id":"f024"},{"courseId":"c02","score":4,"apply":3,"nps":7,"comment":"","createdAt":1790010500000,"id":"f025"},{"courseId":"c02","score":3,"apply":3,"nps":8,"comment":"","createdAt":1790010560000,"id":"f026"},{"courseId":"c02","score":3,"apply":3,"nps":6,"comment":"강사님 설명이 명확했습니다","createdAt":1790010620000,"id":"f027"},{"courseId":"c02","score":4,"apply":2,"nps":7,"comment":"","createdAt":1790010680000,"id":"f028"},{"courseId":"c01","score":5,"apply":4,"nps":9,"comment":"","createdAt":1790099000000,"id":"f029"},{"courseId":"c01","score":4,"apply":5,"nps":9,"comment":"","createdAt":1790099060000,"id":"f030"},{"courseId":"c01","score":3,"apply":5,"nps":10,"comment":"","createdAt":1790099120000,"id":"f031"},{"courseId":"c01","score":5,"apply":5,"nps":10,"comment":"실습 시간이 더 있었으면","createdAt":1790099180000,"id":"f032"},{"courseId":"c01","score":5,"apply":5,"nps":10,"comment":"사례 중심이라 좋았습니다","createdAt":1790099240000,"id":"f033"},{"courseId":"c01","score":5,"apply":4,"nps":9,"comment":"실습 시간이 더 있었으면","createdAt":1790099300000,"id":"f034"},{"courseId":"c01","score":5,"apply":5,"nps":6,"comment":"강의 자료를 미리 받고 싶어요","createdAt":1790099360000,"id":"f035"},{"courseId":"c01","score":4,"apply":4,"nps":9,"comment":"실습 시간이 더 있었으면","createdAt":1790099420000,"id":"f036"},{"courseId":"c01","score":4,"apply":5,"nps":7,"comment":"","createdAt":1790099480000,"id":"f037"},{"courseId":"c01","score":5,"apply":5,"nps":5,"comment":"실습 시간이 더 있었으면","createdAt":1790099540000,"id":"f038"},{"courseId":"c01","score":4,"apply":5,"nps":9,"comment":"","createdAt":1790099600000,"id":"f039"},{"courseId":"c01","score":3,"apply":4,"nps":10,"comment":"실습 시간이 더 있었으면","createdAt":1790099660000,"id":"f040"},{"courseId":"c02","score":4,"apply":3,"nps":7,"comment":"강의 자료를 미리 받고 싶어요","createdAt":1790099720000,"id":"f041"},{"courseId":"c02","score":5,"apply":3,"nps":7,"comment":"사례 중심이라 좋았습니다","createdAt":1790099780000,"id":"f042"},{"courseId":"c02","score":4,"apply":3,"nps":5,"comment":"","createdAt":1790099840000,"id":"f043"},{"courseId":"c02","score":4,"apply":4,"nps":8,"comment":"","createdAt":1790099900000,"id":"f044"},{"courseId":"c02","score":4,"apply":2,"nps":7,"comment":"실습 시간이 더 있었으면","createdAt":1790099960000,"id":"f045"},{"courseId":"c02","score":3,"apply":4,"nps":9,"comment":"실습 시간이 더 있었으면","createdAt":1790100020000,"id":"f046"},{"courseId":"c02","score":4,"apply":4,"nps":8,"comment":"","createdAt":1790100080000,"id":"f047"},{"courseId":"c02","score":4,"apply":2,"nps":5,"comment":"","createdAt":1790100140000,"id":"f048"},{"courseId":"c02","score":4,"apply":3,"nps":6,"comment":"사례 중심이라 좋았습니다","createdAt":1790100200000,"id":"f049"},{"courseId":"c02","score":4,"apply":2,"nps":6,"comment":"강의 자료를 미리 받고 싶어요","createdAt":1790100260000,"id":"f050"},{"courseId":"c02","score":3,"apply":2,"nps":6,"comment":"사례 중심이라 좋았습니다","createdAt":1790100320000,"id":"f051"},{"courseId":"c02","score":3,"apply":4,"nps":5,"comment":"","createdAt":1790100380000,"id":"f052"},{"courseId":"c02","score":3,"apply":2,"nps":6,"comment":"","createdAt":1790100440000,"id":"f053"},{"courseId":"c02","score":3,"apply":2,"nps":5,"comment":"실습 시간이 더 있었으면","createdAt":1790100500000,"id":"f054"},{"courseId":"c02","score":3,"apply":4,"nps":5,"comment":"실습 시간이 더 있었으면","createdAt":1790100560000,"id":"f055"},{"courseId":"c02","score":4,"apply":4,"nps":8,"comment":"사례 중심이라 좋았습니다","createdAt":1790100620000,"id":"f056"},{"courseId":"c02","score":4,"apply":3,"nps":9,"comment":"","createdAt":1790100680000,"id":"f057"},{"courseId":"c02","score":4,"apply":3,"nps":5,"comment":"","createdAt":1790100740000,"id":"f058"}]}</script>
-<script>
-const DEPTS=["경영지원","인사","영업","마케팅","생산","R&D","IT"];
-const LEVELS=["사원","대리","과장","차장","부장"];
-const TOPICS=["리더십","데이터·AI 활용","커뮤니케이션","직무전문성","조직문화","디지털 협업툴","커리어 개발","법정의무교육"];
-const FORMATS=["오프라인 집합","온라인 라이브","이러닝","블렌디드"];
-const TIMINGS=["1분기","2분기","3분기","4분기"];
-const FMT_COLORS=["var(--accent)","var(--signal)","var(--muted)","var(--good)"];
-const WD=["일","월","화","수","목","금","토"];
-
-const S={courses:[],enrolls:[],surveys:[],feedback:[],me:null,canEdit:false,db:null,cat:"전체",current:null};
-try{const j=JSON.parse(document.getElementById("snap").textContent);Object.assign(S,j)}catch(e){}
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
-const nps=a=>a.length?Math.round((a.filter(v=>v>=9).length-a.filter(v=>v<=6).length)/a.length*100):null;
-const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-
-/* ---------- 폼 구성 ---------- */
-function opts(sel,list,ph){sel.innerHTML=(ph?`<option value="">${ph}</option>`:"")+list.map(v=>`<option>${esc(v)}</option>`).join("")}
-function chips(box,name,list,type){box.innerHTML=list.map((v,i)=>`<label class="chip"><input type="${type}" name="${name}" id="${name}-${i}" value="${esc(v)}"><span>${esc(v)}</span></label>`).join("")}
-function scale(box,name,from,to){let h="";for(let i=from;i<=to;i++)h+=`<label><input type="radio" name="${name}" id="${name}-${i}" value="${i}"><span>${i}</span></label>`;box.innerHTML=h}
-opts($("sv-dept"),DEPTS,"선택");opts($("sv-level"),LEVELS,"선택");
-chips($("sv-topics"),"topic",TOPICS,"checkbox");chips($("sv-format"),"fmt",FORMATS,"radio");chips($("sv-timing"),"tim",TIMINGS,"radio");
-scale($("fb-score"),"score",1,5);scale($("fb-apply"),"apply",1,5);scale($("fb-nps"),"npsv",0,10);
-opts($("ap-dept"),DEPTS);opts($("ad-cat"),TOPICS);opts($("ad-format"),FORMATS);
-$("sv-topics").addEventListener("change",e=>{const c=[...document.querySelectorAll('input[name=topic]:checked')];if(c.length>3){e.target.checked=false}});
-
-/* ---------- 라우팅 ---------- */
-const VIEWS=["survey","courses","feedback","dashboard"];
-function route(){const v=VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"courses";
-  VIEWS.forEach(x=>{$("v-"+x).hidden=x!==v});
-  document.querySelectorAll(".steps a").forEach(a=>{if(a.dataset.view===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});}
-addEventListener("hashchange",route);route();
-
-/* ---------- 계산 ---------- */
-function stats(c){const es=S.enrolls.filter(e=>e.courseId===c.id);const fb=S.feedback.filter(f=>f.courseId===c.id);
-  return{conf:es.filter(e=>e.status==="확정").length,wait:es.filter(e=>e.status==="대기").length,
-    score:avg(fb.map(f=>f.score)),apply:avg(fb.map(f=>f.apply)),nps:nps(fb.map(f=>f.nps)),n:fb.length}}
-function fmtDate(d){const t=new Date(d+"T00:00:00");return isNaN(t)?{m:"",d:"-",w:""}:{m:(t.getMonth()+1)+"월",d:t.getDate(),w:WD[t.getDay()]}}
-
-/* ---------- 렌더: 교육신청 ---------- */
-function renderFilter(){const cats=["전체",...TOPICS.filter(t=>S.courses.some(c=>c.category===t))];
-  $("catFilter").innerHTML=cats.map(c=>`<button type="button" aria-pressed="${c===S.cat}" data-cat="${esc(c)}">${esc(c)}</button>`).join("")}
-$("catFilter").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;S.cat=b.dataset.cat;renderFilter();renderCourses()});
-function renderCourses(){
-  const list=S.courses.filter(c=>S.cat==="전체"||c.category===S.cat).sort((a,b)=>String(a.date).localeCompare(String(b.date)));
-  if(!S.courses.length){$("courseList").innerHTML=`<div class="empty">아직 개설된 과정이 없습니다. 대시보드의 '과정 개설'에서 첫 과정을 등록하세요.</div>`;return}
-  $("courseList").innerHTML=list.map(c=>{const st=stats(c),d=fmtDate(c.date),pct=Math.min(100,st.conf/c.capacity*100),full=st.conf>=c.capacity;
-    const mine=S.enrolls.find(e=>e.courseId===c.id&&S.me&&e.applicantId===S.me);
-    let pill=c.open===false?`<span class="pill closed">신청 마감</span>`:full?`<span class="pill wait">대기 접수</span>`:`<span class="pill ok">신청 가능</span>`;
-    let cta=mine?`<span class="pill ${mine.status==="확정"?"ok":"wait"}">${mine.status==="확정"?"신청 완료":"대기 "+waitRank(mine)+"번"}</span>`
-      :c.open===false?``:`<button class="btn btn-sm" data-apply="${esc(c.id)}">${full?"대기 신청":"신청"}</button>`;
-    return `<article class="course"><div class="date" aria-label="${esc(c.date)}"><span class="m">${d.m}</span><span class="d num">${d.d}</span><span class="w">${d.w}</span></div>
-      <div class="body"><span class="cat">${esc(c.category)}</span><h3>${esc(c.title)}</h3>
-      <div class="meta"><span>${esc(c.format)}</span><span>${esc(c.hours)}시간</span>${c.instructor?`<span>강사 ${esc(c.instructor)}</span>`:""}${pill}</div>
-      <div class="seat"><span class="bar"><i class="${full?"full":""}" style="width:${pct}%"></i></span><span class="num">${st.conf}/${c.capacity}</span>${st.wait?`<span>대기 ${st.wait}</span>`:""}</div></div>
-      <div class="cta">${cta}</div></article>`}).join("")||`<div class="empty">이 분야에 개설된 과정이 없습니다.</div>`}
-function waitRank(e){const w=S.enrolls.filter(x=>x.courseId===e.courseId&&x.status==="대기").sort((a,b)=>a.createdAt-b.createdAt);return w.findIndex(x=>x.id===e.id)+1}
-function renderMine(){const mine=S.me?S.enrolls.filter(e=>e.applicantId===S.me):[];
-  $("myList").innerHTML=mine.length?mine.map(e=>{const c=S.courses.find(x=>x.id===e.courseId);
-    return `<li><span><strong>${esc(c?c.title:"삭제된 과정")}</strong><br><span class="hint">${esc(e.name)} · ${esc(e.dept)} · ${e.status==="확정"?"확정":"대기 "+waitRank(e)+"번"}</span></span><button class="btn-ghost btn-sm" data-cancel="${esc(e.id)}">취소</button></li>`}).join("")
-    :`<li class="hint" style="border:0">아직 신청한 과정이 없습니다.</li>`}
-$("courseList").addEventListener("click",e=>{const b=e.target.closest("[data-apply]");if(b)openSheet(b.dataset.apply)});
-$("myList").addEventListener("click",async e=>{const b=e.target.closest("[data-cancel]");if(!b)return;b.disabled=true;await cancelEnroll(b.dataset.cancel)});
-
-/* ---------- 신청 시트 ---------- */
-function openSheet(id){const c=S.courses.find(x=>x.id===id);if(!c)return;S.current=c;const st=stats(c);
-  $("ap-cat").textContent=c.category;$("ap-title").textContent=c.title;$("ap-meta").textContent=`${c.date} · ${c.format} · ${c.hours}시간`;
-  $("ap-note").textContent=st.conf>=c.capacity?`정원이 찼습니다. 대기 ${st.wait+1}번으로 접수됩니다.`:`잔여 ${c.capacity-st.conf}석`;
-  $("ap-name").value=store.get("lh-name")||"";const d=store.get("lh-dept");if(d)$("ap-dept").value=d;
-  $("ap-msg").textContent="";$("ap-submit").disabled=false;$("applySheet").hidden=false;$("ap-name").focus()}
-function closeSheet(){$("applySheet").hidden=true;S.current=null}
-$("ap-cancel").addEventListener("click",closeSheet);
-$("applySheet").addEventListener("click",e=>{if(e.target===$("applySheet"))closeSheet()});
-addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("applySheet").hidden)closeSheet()});
-$("applyForm").addEventListener("submit",async e=>{e.preventDefault();const c=S.current;const name=$("ap-name").value.trim(),dept=$("ap-dept").value;
-  if(!name){$("ap-msg").textContent="이름을 입력해 주세요.";return}
-  if(!S.db){$("ap-msg").textContent="미리보기에서는 저장되지 않습니다. 로그인한 상태로 열면 실제로 제출할 수 있습니다.";return}
-  if(S.enrolls.some(x=>x.courseId===c.id&&x.name===name&&x.dept===dept)){$("ap-msg").textContent="이미 같은 이름으로 신청된 과정입니다.";return}
-  $("ap-submit").disabled=true;store.set("lh-name",name);store.set("lh-dept",dept);
-  const full=stats(c).conf>=c.capacity;
-  try{await S.db.collection("enrollments").add({courseId:c.id,name,dept,status:full?"대기":"확정",applicantId:S.me||"",createdAt:Date.now()});closeSheet()}
-  catch(err){$("ap-submit").disabled=false;$("ap-msg").textContent=err&&err.code==="quota_exceeded"?"저장 공간이 가득 찼습니다.":"저장하지 못했습니다. 잠시 후 다시 시도해 주세요."}});
-async function cancelEnroll(id){const e=S.enrolls.find(x=>x.id===id);if(!e)return;
-  try{await S.db.doc("enrollments/"+id).delete();
-    if(e.status==="확정"){const next=S.enrolls.filter(x=>x.courseId===e.courseId&&x.status==="대기"&&x.id!==id).sort((a,b)=>a.createdAt-b.createdAt)[0];
-      if(next)await S.db.doc("enrollments/"+next.id).update({status:"확정"})}}catch(err){}}
-
-/* ---------- 수요조사 ---------- */
-$("surveyForm").addEventListener("submit",async e=>{e.preventDefault();const m=$("sv-msg");m.className="msg";
-  const topics=[...document.querySelectorAll('input[name=topic]:checked')].map(i=>i.value);
-  const fmt=document.querySelector('input[name=fmt]:checked'),tim=document.querySelector('input[name=tim]:checked');
-  if(!$("sv-dept").value||!$("sv-level").value||!topics.length||!fmt||!tim){m.className="msg err";m.textContent="부서, 직급, 주제, 방식, 시기를 모두 골라 주세요.";return}
-  if(!S.db){m.className="msg err";m.textContent="미리보기에서는 저장되지 않습니다. 로그인한 상태로 열면 실제로 제출할 수 있습니다.";return}
-  try{await S.db.collection("surveys").add({dept:$("sv-dept").value,level:$("sv-level").value,topics,format:fmt.value,timing:tim.value,comment:$("sv-comment").value.trim(),createdAt:Date.now()});
-    e.target.reset();m.textContent="응답이 제출되었습니다. 감사합니다."}catch(err){m.className="msg err";m.textContent="제출하지 못했습니다. 잠시 후 다시 시도해 주세요."}});
-
-/* ---------- 만족도 ---------- */
-function renderFbSelect(){const sel=$("fb-course"),v=sel.value;
-  sel.innerHTML=`<option value="">과정 선택</option>`+[...S.courses].sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(c=>`<option value="${esc(c.id)}">${esc(c.title)} (${esc(c.date)})</option>`).join("");sel.value=v}
-$("fbForm").addEventListener("submit",async e=>{e.preventDefault();const m=$("fb-msg");m.className="msg";
-  const g=n=>{const i=document.querySelector(`input[name=${n}]:checked`);return i?Number(i.value):null};
-  const score=g("score"),apply=g("apply"),n=g("npsv");
-  if(!$("fb-course").value||score==null||apply==null||n==null){m.className="msg err";m.textContent="과정과 세 가지 점수를 모두 선택해 주세요.";return}
-  if(!S.db){m.className="msg err";m.textContent="미리보기에서는 저장되지 않습니다. 로그인한 상태로 열면 실제로 제출할 수 있습니다.";return}
-  try{await S.db.collection("feedback").add({courseId:$("fb-course").value,score,apply,nps:n,comment:$("fb-comment").value.trim(),createdAt:Date.now()});
-    e.target.reset();m.textContent="평가가 제출되었습니다."}catch(err){m.className="msg err";m.textContent="제출하지 못했습니다. 잠시 후 다시 시도해 주세요."}});
-
-/* ---------- 대시보드 ---------- */
-function bars(rows,max){return rows.map(r=>`<div class="brow"><span class="t" title="${esc(r.t)}">${esc(r.t)}</span><span class="track"><i class="${r.gap?"gap":""}" style="width:${max?r.v/max*100:0}%"></i></span><span class="v">${r.v}</span></div>`).join("")}
-function renderDash(){
-  const cap=S.courses.reduce((a,c)=>a+Number(c.capacity||0),0);
-  const conf=S.enrolls.filter(e=>e.status==="확정").length,wait=S.enrolls.filter(e=>e.status==="대기").length;
-  const sc=avg(S.feedback.map(f=>f.score)),np=nps(S.feedback.map(f=>f.nps));
-  const k=[["총 신청",`${conf+wait}<small>명</small>`,`확정 ${conf} · 대기 ${wait}`],
-    ["정원 충족률",cap?`${Math.round(Math.min(conf,cap)/cap*100)}<small>%</small>`:"–",`정원 ${cap}석 · ${S.courses.length}개 과정`],
-    ["평균 만족도",sc!=null?`${sc.toFixed(2)}<small>/5</small>`:"–",`평가 ${S.feedback.length}건`],
-    ["NPS",np!=null?`${np>0?"+":""}${np}`:"–",`수요조사 응답 ${S.surveys.length}건`]];
-  $("kpis").innerHTML=k.map(([a,b,c])=>`<div class="kpi"><span class="k">${a}</span><span class="v">${b}</span><span class="s">${c}</span></div>`).join("");
-
-  const cnt={};S.surveys.forEach(s=>(s.topics||[]).forEach(t=>cnt[t]=(cnt[t]||0)+1));
-  const offered=new Set(S.courses.map(c=>c.category));
-  const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1]).map(([t,v])=>({t,v,gap:!offered.has(t)}));
-  $("demandBars").innerHTML=top.length?bars(top,top[0].v):`<div class="empty">수요조사 응답이 들어오면 주제별 순위가 표시됩니다.</div>`;
-  const gaps=top.filter(r=>r.gap).slice(0,2);
-  const hot=S.courses.map(c=>({c,st:stats(c)})).filter(x=>x.st.wait>0).sort((a,b)=>b.st.wait-a.st.wait)[0];
-  const ins=[];if(gaps.length)ins.push(`<span><b>개설 검토</b> 수요가 있지만 과정이 없는 주제: ${gaps.map(g=>`${esc(g.t)}(${g.v}명)`).join(", ")}</span>`);
-  if(hot)ins.push(`<span><b>차수 증설</b> '${esc(hot.c.title)}' 대기자 ${hot.st.wait}명</span>`);
-  const low=S.courses.map(c=>({c,st:stats(c)})).filter(x=>x.st.n>=3&&x.st.apply!=null&&x.st.apply<3.5)[0];
-  if(low)ins.push(`<span><b>내용 보완</b> '${esc(low.c.title)}' 현업적용도 ${low.st.apply.toFixed(1)}점</span>`);
-  $("insight").innerHTML=ins.join("");$("insight").hidden=!ins.length;
-
-  $("courseTable").innerHTML=S.courses.length?[...S.courses].sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(c=>{const st=stats(c);
-    return `<tr><td>${esc(c.title)}<br><span class="hint">${esc(c.date)} · ${esc(c.category)}</span></td><td class="r num">${st.conf}/${c.capacity}</td><td class="r num">${st.wait||"–"}</td>
-    <td class="r num">${st.score!=null?st.score.toFixed(1):"–"}</td><td class="r num">${st.apply!=null?st.apply.toFixed(1):"–"}</td><td class="r num">${st.nps!=null?(st.nps>0?"+":"")+st.nps:"–"}</td></tr>`}).join("")
-    :`<tr><td colspan="6" class="hint">개설된 과정이 없습니다.</td></tr>`;
-
-  const dc={};S.enrolls.forEach(e=>dc[e.dept]=(dc[e.dept]||0)+1);
-  const dr=DEPTS.map(t=>({t,v:dc[t]||0})).filter(r=>r.v).sort((a,b)=>b.v-a.v);
-  $("deptBars").innerHTML=dr.length?bars(dr,dr[0].v):`<div class="empty">신청이 들어오면 표시됩니다.</div>`;
-
-  const fc={};S.surveys.forEach(s=>s.format&&(fc[s.format]=(fc[s.format]||0)+1));const tot=Object.values(fc).reduce((a,b)=>a+b,0);
-  $("formatStack").innerHTML=tot?`<div class="stack" role="img" aria-label="선호 교육 방식 비율">${FORMATS.map((f,i)=>fc[f]?`<i style="width:${fc[f]/tot*100}%;background:${FMT_COLORS[i]}"></i>`:"").join("")}</div>
-    <div class="legend" style="margin-top:10px">${FORMATS.map((f,i)=>fc[f]?`<span><b style="background:${FMT_COLORS[i]}"></b>${f} <span class="num">${Math.round(fc[f]/tot*100)}%</span></span>`:"").join("")}</div>`
-    :`<div class="empty">수요조사 응답이 들어오면 표시됩니다.</div>`;
-  $("adminPanel").hidden=!S.canEdit;$("adminHint").textContent=S.demo?"체험 모드에서는 누구나 개설해 볼 수 있습니다":"관리자 전용";
-}
-
-/* ---------- 과정 개설 ---------- */
-$("addForm").addEventListener("submit",async e=>{e.preventDefault();const m=$("ad-msg");m.className="msg";
-  const t=$("ad-title").value.trim(),d=$("ad-date").value;
-  if(!t||!d){m.className="msg err";m.textContent="과정명과 교육일을 입력해 주세요.";return}
-  try{await S.db.collection("courses").add({title:t,category:$("ad-cat").value,format:$("ad-format").value,date:d,hours:Number($("ad-hours").value)||4,capacity:Number($("ad-cap").value)||20,instructor:$("ad-inst").value.trim(),open:true,createdAt:Date.now()});
-    e.target.reset();$("ad-hours").value=4;$("ad-cap").value=20;m.textContent="과정이 개설되었습니다."}
-  catch(err){m.className="msg err";m.textContent="개설하지 못했습니다. 관리자 권한이 있는지 확인해 주세요."}});
-
-function renderAll(){renderFilter();renderCourses();renderMine();renderFbSelect();renderDash()}
-renderAll();
-
-/* ---------- 체험 모드: 저장 없이 이 화면에서만 반영 ---------- */
-function mockDb(){const K={courses:"courses",enrollments:"enrolls",surveys:"surveys",feedback:"feedback"};let n=0;
-  const at=p=>{const[c,id]=p.split("/");return{arr:S[K[c]],id}};
-  return{collection:c=>({add:async d=>{S[K[c]].push({id:"local"+(++n),...d});renderAll()}}),
-    doc:p=>({delete:async()=>{const{arr,id}=at(p);const i=arr.findIndex(x=>x.id===id);if(i>=0)arr.splice(i,1);renderAll()},
-      update:async d=>{const{arr,id}=at(p);const x=arr.find(x=>x.id===id);if(x)Object.assign(x,d);renderAll()}})}}
-function startDemo(keepLive){S.demo=true;S.db=mockDb();if(!S.me)S.me="demo-viewer";if(!keepLive)S.canEdit=true;$("dbNotice").hidden=false;renderAll()}
-
-/* ---------- 데이터 연결 ---------- */
-(async()=>{
-  let db=null;try{db=await window.claude?.use?.("db")}catch(e){}
-  if(!db){startDemo();return}
-  S.db=db;
-  const user=await window.claude.use("user");
-  if(user){try{S.me=await user.id()}catch(e){}try{S.canEdit=!!(await user.canEdit())}catch(e){}
-    let w=null;try{w=await user.can("data.write")}catch(e){}
-    if(w===false){startDemo(true)}}
-  const sub=(col,key)=>db.collection(col).onSnapshot(s=>{S[key]=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},()=>{});
-  sub("courses","courses");sub("enrollments","enrolls");sub("surveys","surveys");sub("feedback","feedback");
-})();
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>

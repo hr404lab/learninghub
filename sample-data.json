@@ -1,0 +1,2696 @@
+{
+ "courses": [
+  {
+   "title": "신임 팀장 리더십 스쿨",
+   "category": "리더십",
+   "format": "블렌디드",
+   "date": "2026-10-14",
+   "hours": 16,
+   "capacity": 20,
+   "instructor": "박서윤",
+   "open": true,
+   "createdAt": 1790000000000,
+   "id": "c01"
+  },
+  {
+   "title": "엑셀·파워BI로 하는 HR 데이터 분석",
+   "category": "데이터·AI 활용",
+   "format": "오프라인 집합",
+   "date": "2026-10-22",
+   "hours": 8,
+   "capacity": 16,
+   "instructor": "이도현",
+   "open": true,
+   "createdAt": 1790000000001,
+   "id": "c02"
+  },
+  {
+   "title": "생성형 AI 업무 활용 실습",
+   "category": "데이터·AI 활용",
+   "format": "온라인 라이브",
+   "date": "2026-10-29",
+   "hours": 4,
+   "capacity": 24,
+   "instructor": "정하린",
+   "open": true,
+   "createdAt": 1790000000002,
+   "id": "c03"
+  },
+  {
+   "title": "피드백 대화법",
+   "category": "커뮤니케이션",
+   "format": "오프라인 집합",
+   "date": "2026-11-19",
+   "hours": 6,
+   "capacity": 15,
+   "instructor": "김민재",
+   "open": true,
+   "createdAt": 1790000000003,
+   "id": "c04"
+  },
+  {
+   "title": "실무자를 위한 노동법 기초",
+   "category": "직무전문성",
+   "format": "온라인 라이브",
+   "date": "2026-11-26",
+   "hours": 4,
+   "capacity": 30,
+   "instructor": "최유진",
+   "open": true,
+   "createdAt": 1790000000004,
+   "id": "c05"
+  },
+  {
+   "title": "직무별 바이브코딩 실전 워크숍",
+   "category": "디지털 협업툴",
+   "format": "오프라인 집합",
+   "date": "2026-12-03",
+   "hours": 6,
+   "capacity": 20,
+   "instructor": "한지우",
+   "open": true,
+   "createdAt": 1790000000005,
+   "id": "c06"
+  },
+  {
+   "title": "직장 내 괴롭힘 예방교육",
+   "category": "법정의무교육",
+   "format": "이러닝",
+   "date": "2026-12-10",
+   "hours": 1,
+   "capacity": 100,
+   "instructor": "사내 강사",
+   "open": true,
+   "createdAt": 1790000000006,
+   "id": "c07"
+  },
+  {
+   "title": "중간관리자 코칭 리더십",
+   "category": "리더십",
+   "format": "오프라인 집합",
+   "date": "2026-12-15",
+   "hours": 8,
+   "capacity": 12,
+   "instructor": "박서윤",
+   "open": true,
+   "createdAt": 1790000000007,
+   "id": "c08"
+  }
+ ],
+ "enrolls": [
+  {
+   "courseId": "c01",
+   "name": "서서연",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790000400563,
+   "id": "e001"
+  },
+  {
+   "courseId": "c01",
+   "name": "최예린",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790000536517,
+   "id": "e002"
+  },
+  {
+   "courseId": "c01",
+   "name": "조서연",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790000657333,
+   "id": "e003"
+  },
+  {
+   "courseId": "c01",
+   "name": "박지민",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790000807455,
+   "id": "e004"
+  },
+  {
+   "courseId": "c01",
+   "name": "이지호",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790000962574,
+   "id": "e005"
+  },
+  {
+   "courseId": "c01",
+   "name": "류서연",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790001152389,
+   "id": "e006"
+  },
+  {
+   "courseId": "c01",
+   "name": "윤서연",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790001628338,
+   "id": "e007"
+  },
+  {
+   "courseId": "c01",
+   "name": "정채원",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790001827981,
+   "id": "e008"
+  },
+  {
+   "courseId": "c01",
+   "name": "송서윤",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790002011495,
+   "id": "e009"
+  },
+  {
+   "courseId": "c01",
+   "name": "조예린",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790002179556,
+   "id": "e010"
+  },
+  {
+   "courseId": "c01",
+   "name": "박지호",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790002341719,
+   "id": "e011"
+  },
+  {
+   "courseId": "c01",
+   "name": "황채원",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790002464215,
+   "id": "e012"
+  },
+  {
+   "courseId": "c01",
+   "name": "권지호",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790002972578,
+   "id": "e013"
+  },
+  {
+   "courseId": "c01",
+   "name": "윤서윤",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790003507776,
+   "id": "e014"
+  },
+  {
+   "courseId": "c01",
+   "name": "임준서",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790003823729,
+   "id": "e015"
+  },
+  {
+   "courseId": "c01",
+   "name": "권수아",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790004402896,
+   "id": "e016"
+  },
+  {
+   "courseId": "c01",
+   "name": "신서윤",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790004539652,
+   "id": "e017"
+  },
+  {
+   "courseId": "c01",
+   "name": "황하은",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790004958323,
+   "id": "e018"
+  },
+  {
+   "courseId": "c02",
+   "name": "박채원",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790005059434,
+   "id": "e019"
+  },
+  {
+   "courseId": "c02",
+   "name": "오다은",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790005448422,
+   "id": "e020"
+  },
+  {
+   "courseId": "c02",
+   "name": "권도윤",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790006029223,
+   "id": "e021"
+  },
+  {
+   "courseId": "c02",
+   "name": "황도윤",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790006187365,
+   "id": "e022"
+  },
+  {
+   "courseId": "c02",
+   "name": "임지호",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790006310981,
+   "id": "e023"
+  },
+  {
+   "courseId": "c02",
+   "name": "서예린",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790006838269,
+   "id": "e024"
+  },
+  {
+   "courseId": "c02",
+   "name": "오서윤",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790006921927,
+   "id": "e025"
+  },
+  {
+   "courseId": "c02",
+   "name": "조수아",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790007104710,
+   "id": "e026"
+  },
+  {
+   "courseId": "c02",
+   "name": "서건우",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790007300333,
+   "id": "e027"
+  },
+  {
+   "courseId": "c02",
+   "name": "권건우",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790007880958,
+   "id": "e028"
+  },
+  {
+   "courseId": "c02",
+   "name": "신채원",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790008232293,
+   "id": "e029"
+  },
+  {
+   "courseId": "c02",
+   "name": "오건우",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790008584238,
+   "id": "e030"
+  },
+  {
+   "courseId": "c02",
+   "name": "강하준",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790008886198,
+   "id": "e031"
+  },
+  {
+   "courseId": "c02",
+   "name": "김유나",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790009189422,
+   "id": "e032"
+  },
+  {
+   "courseId": "c02",
+   "name": "김하준",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790009440622,
+   "id": "e033"
+  },
+  {
+   "courseId": "c02",
+   "name": "홍지호",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790009939919,
+   "id": "e034"
+  },
+  {
+   "courseId": "c02",
+   "name": "안다은",
+   "dept": "IT",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790010334007,
+   "id": "e035"
+  },
+  {
+   "courseId": "c02",
+   "name": "송건우",
+   "dept": "마케팅",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790010450622,
+   "id": "e036"
+  },
+  {
+   "courseId": "c02",
+   "name": "최유나",
+   "dept": "영업",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790010928028,
+   "id": "e037"
+  },
+  {
+   "courseId": "c02",
+   "name": "박은우",
+   "dept": "경영지원",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790011407922,
+   "id": "e038"
+  },
+  {
+   "courseId": "c03",
+   "name": "한다은",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790011929952,
+   "id": "e039"
+  },
+  {
+   "courseId": "c03",
+   "name": "류하준",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790012045081,
+   "id": "e040"
+  },
+  {
+   "courseId": "c03",
+   "name": "홍민준",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790012211474,
+   "id": "e041"
+  },
+  {
+   "courseId": "c03",
+   "name": "홍건우",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790012345205,
+   "id": "e042"
+  },
+  {
+   "courseId": "c03",
+   "name": "오다은",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790012560971,
+   "id": "e043"
+  },
+  {
+   "courseId": "c03",
+   "name": "최유나",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790013002824,
+   "id": "e044"
+  },
+  {
+   "courseId": "c03",
+   "name": "임도윤",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790013551449,
+   "id": "e045"
+  },
+  {
+   "courseId": "c03",
+   "name": "한시우",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790013762567,
+   "id": "e046"
+  },
+  {
+   "courseId": "c03",
+   "name": "강준서",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790014324438,
+   "id": "e047"
+  },
+  {
+   "courseId": "c03",
+   "name": "안예린",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790014408655,
+   "id": "e048"
+  },
+  {
+   "courseId": "c03",
+   "name": "김준서",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790014622378,
+   "id": "e049"
+  },
+  {
+   "courseId": "c03",
+   "name": "박시우",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790014994947,
+   "id": "e050"
+  },
+  {
+   "courseId": "c03",
+   "name": "오지민",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790015439459,
+   "id": "e051"
+  },
+  {
+   "courseId": "c03",
+   "name": "윤다은",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790016026575,
+   "id": "e052"
+  },
+  {
+   "courseId": "c03",
+   "name": "서지민",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790016291200,
+   "id": "e053"
+  },
+  {
+   "courseId": "c03",
+   "name": "오민준",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790016560829,
+   "id": "e054"
+  },
+  {
+   "courseId": "c03",
+   "name": "황시우",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790016650123,
+   "id": "e055"
+  },
+  {
+   "courseId": "c03",
+   "name": "오현우",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790016913174,
+   "id": "e056"
+  },
+  {
+   "courseId": "c03",
+   "name": "오도윤",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790017339671,
+   "id": "e057"
+  },
+  {
+   "courseId": "c04",
+   "name": "황은우",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790017630842,
+   "id": "e058"
+  },
+  {
+   "courseId": "c04",
+   "name": "홍다은",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790018044985,
+   "id": "e059"
+  },
+  {
+   "courseId": "c04",
+   "name": "오도윤",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790018106986,
+   "id": "e060"
+  },
+  {
+   "courseId": "c04",
+   "name": "조유나",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790018292714,
+   "id": "e061"
+  },
+  {
+   "courseId": "c04",
+   "name": "한도윤",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790018539907,
+   "id": "e062"
+  },
+  {
+   "courseId": "c04",
+   "name": "박서윤",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790019014973,
+   "id": "e063"
+  },
+  {
+   "courseId": "c04",
+   "name": "김하준",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790019253234,
+   "id": "e064"
+  },
+  {
+   "courseId": "c04",
+   "name": "정다은",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790019801192,
+   "id": "e065"
+  },
+  {
+   "courseId": "c04",
+   "name": "오하준",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790020358591,
+   "id": "e066"
+  },
+  {
+   "courseId": "c04",
+   "name": "최준서",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790020555937,
+   "id": "e067"
+  },
+  {
+   "courseId": "c04",
+   "name": "조은우",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790020761951,
+   "id": "e068"
+  },
+  {
+   "courseId": "c04",
+   "name": "임준서",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790020851304,
+   "id": "e069"
+  },
+  {
+   "courseId": "c04",
+   "name": "한시우",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790021163527,
+   "id": "e070"
+  },
+  {
+   "courseId": "c04",
+   "name": "이예린",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790021662893,
+   "id": "e071"
+  },
+  {
+   "courseId": "c04",
+   "name": "안하은",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790022203309,
+   "id": "e072"
+  },
+  {
+   "courseId": "c04",
+   "name": "정준서",
+   "dept": "인사",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790022789326,
+   "id": "e073"
+  },
+  {
+   "courseId": "c04",
+   "name": "권서윤",
+   "dept": "경영지원",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790023384673,
+   "id": "e074"
+  },
+  {
+   "courseId": "c04",
+   "name": "정서윤",
+   "dept": "R&D",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790023448796,
+   "id": "e075"
+  },
+  {
+   "courseId": "c04",
+   "name": "최채원",
+   "dept": "마케팅",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790023657231,
+   "id": "e076"
+  },
+  {
+   "courseId": "c04",
+   "name": "안준서",
+   "dept": "영업",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790023781986,
+   "id": "e077"
+  },
+  {
+   "courseId": "c05",
+   "name": "최채원",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790024347910,
+   "id": "e078"
+  },
+  {
+   "courseId": "c05",
+   "name": "장서연",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790024467492,
+   "id": "e079"
+  },
+  {
+   "courseId": "c05",
+   "name": "송민준",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790024629985,
+   "id": "e080"
+  },
+  {
+   "courseId": "c05",
+   "name": "홍준서",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790024756432,
+   "id": "e081"
+  },
+  {
+   "courseId": "c05",
+   "name": "장현우",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790025353472,
+   "id": "e082"
+  },
+  {
+   "courseId": "c05",
+   "name": "황준서",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790025946312,
+   "id": "e083"
+  },
+  {
+   "courseId": "c05",
+   "name": "장채원",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790026265997,
+   "id": "e084"
+  },
+  {
+   "courseId": "c05",
+   "name": "정하은",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790026538426,
+   "id": "e085"
+  },
+  {
+   "courseId": "c05",
+   "name": "한도윤",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790026725955,
+   "id": "e086"
+  },
+  {
+   "courseId": "c05",
+   "name": "조수아",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790027038283,
+   "id": "e087"
+  },
+  {
+   "courseId": "c05",
+   "name": "정예린",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790027226576,
+   "id": "e088"
+  },
+  {
+   "courseId": "c06",
+   "name": "정현우",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790027436500,
+   "id": "e089"
+  },
+  {
+   "courseId": "c06",
+   "name": "최건우",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790027726754,
+   "id": "e090"
+  },
+  {
+   "courseId": "c06",
+   "name": "윤서윤",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790028297683,
+   "id": "e091"
+  },
+  {
+   "courseId": "c06",
+   "name": "서주원",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790028810166,
+   "id": "e092"
+  },
+  {
+   "courseId": "c06",
+   "name": "한도윤",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790029311906,
+   "id": "e093"
+  },
+  {
+   "courseId": "c06",
+   "name": "송현우",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790029755635,
+   "id": "e094"
+  },
+  {
+   "courseId": "c06",
+   "name": "서주원",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790030277488,
+   "id": "e095"
+  },
+  {
+   "courseId": "c06",
+   "name": "박지우",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790030647294,
+   "id": "e096"
+  },
+  {
+   "courseId": "c06",
+   "name": "최도윤",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790030946950,
+   "id": "e097"
+  },
+  {
+   "courseId": "c07",
+   "name": "강시우",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790031285414,
+   "id": "e098"
+  },
+  {
+   "courseId": "c07",
+   "name": "장건우",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790031481262,
+   "id": "e099"
+  },
+  {
+   "courseId": "c07",
+   "name": "안지호",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790031697885,
+   "id": "e100"
+  },
+  {
+   "courseId": "c07",
+   "name": "박시우",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790032276523,
+   "id": "e101"
+  },
+  {
+   "courseId": "c07",
+   "name": "강하은",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790032396843,
+   "id": "e102"
+  },
+  {
+   "courseId": "c07",
+   "name": "김도윤",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790032532774,
+   "id": "e103"
+  },
+  {
+   "courseId": "c08",
+   "name": "윤도윤",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790032865982,
+   "id": "e104"
+  },
+  {
+   "courseId": "c08",
+   "name": "권민준",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790033203278,
+   "id": "e105"
+  },
+  {
+   "courseId": "c08",
+   "name": "신시우",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790033618904,
+   "id": "e106"
+  },
+  {
+   "courseId": "c08",
+   "name": "윤지우",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790033814406,
+   "id": "e107"
+  },
+  {
+   "courseId": "c08",
+   "name": "강은우",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790034043697,
+   "id": "e108"
+  },
+  {
+   "courseId": "c08",
+   "name": "안은우",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790034430844,
+   "id": "e109"
+  },
+  {
+   "courseId": "c08",
+   "name": "강시우",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790034794889,
+   "id": "e110"
+  },
+  {
+   "courseId": "c05",
+   "name": "신하은",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790080232962,
+   "id": "e111"
+  },
+  {
+   "courseId": "c05",
+   "name": "조유나",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790080795335,
+   "id": "e112"
+  },
+  {
+   "courseId": "c05",
+   "name": "강준서",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790081392684,
+   "id": "e113"
+  },
+  {
+   "courseId": "c05",
+   "name": "김민준",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790082279385,
+   "id": "e114"
+  },
+  {
+   "courseId": "c05",
+   "name": "신도윤",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790082953182,
+   "id": "e115"
+  },
+  {
+   "courseId": "c05",
+   "name": "윤지민",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790083800998,
+   "id": "e116"
+  },
+  {
+   "courseId": "c05",
+   "name": "신다은",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790084319074,
+   "id": "e117"
+  },
+  {
+   "courseId": "c05",
+   "name": "송유나",
+   "dept": "생산",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790084723981,
+   "id": "e118"
+  },
+  {
+   "courseId": "c06",
+   "name": "오민준",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790085464314,
+   "id": "e119"
+  },
+  {
+   "courseId": "c06",
+   "name": "최민준",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790085617075,
+   "id": "e120"
+  },
+  {
+   "courseId": "c06",
+   "name": "한건우",
+   "dept": "마케팅",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790086255891,
+   "id": "e121"
+  },
+  {
+   "courseId": "c06",
+   "name": "이유나",
+   "dept": "IT",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790086511879,
+   "id": "e122"
+  },
+  {
+   "courseId": "c06",
+   "name": "박은우",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790086818153,
+   "id": "e123"
+  },
+  {
+   "courseId": "c06",
+   "name": "류도윤",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790087568111,
+   "id": "e124"
+  },
+  {
+   "courseId": "c06",
+   "name": "송건우",
+   "dept": "인사",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790088127574,
+   "id": "e125"
+  },
+  {
+   "courseId": "c07",
+   "name": "송하은",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790088340824,
+   "id": "e126"
+  },
+  {
+   "courseId": "c07",
+   "name": "안건우",
+   "dept": "영업",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790088874069,
+   "id": "e127"
+  },
+  {
+   "courseId": "c07",
+   "name": "서시우",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790089442054,
+   "id": "e128"
+  },
+  {
+   "courseId": "c07",
+   "name": "강유나",
+   "dept": "경영지원",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790089599846,
+   "id": "e129"
+  },
+  {
+   "courseId": "c07",
+   "name": "송다은",
+   "dept": "R&D",
+   "status": "확정",
+   "applicantId": "",
+   "createdAt": 1790089733368,
+   "id": "e130"
+  },
+  {
+   "id": "e131",
+   "courseId": "c04",
+   "name": "윤서연",
+   "dept": "영업",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790300000000
+  },
+  {
+   "id": "e132",
+   "courseId": "c04",
+   "name": "한도윤",
+   "dept": "인사",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790300600000
+  },
+  {
+   "id": "e133",
+   "courseId": "c04",
+   "name": "오지민",
+   "dept": "생산",
+   "status": "대기",
+   "applicantId": "",
+   "createdAt": 1790301200000
+  }
+ ],
+ "surveys": [
+  {
+   "dept": "마케팅",
+   "level": "사원",
+   "topics": [
+    "리더십",
+    "커리어 개발",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "4분기",
+   "comment": "부서 간 협업 방식 개선",
+   "createdAt": 1790005000000,
+   "id": "s001"
+  },
+  {
+   "dept": "영업",
+   "level": "사원",
+   "topics": [
+    "조직문화",
+    "커뮤니케이션",
+    "데이터·AI 활용"
+   ],
+   "format": "블렌디드",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790008600000,
+   "id": "s002"
+  },
+  {
+   "dept": "경영지원",
+   "level": "과장",
+   "topics": [
+    "리더십",
+    "커뮤니케이션",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790012200000,
+   "id": "s003"
+  },
+  {
+   "dept": "인사",
+   "level": "사원",
+   "topics": [
+    "커뮤니케이션",
+    "디지털 협업툴"
+   ],
+   "format": "오프라인 집합",
+   "timing": "3분기",
+   "comment": "사내 경력경로가 궁금합니다",
+   "createdAt": 1790015800000,
+   "id": "s004"
+  },
+  {
+   "dept": "인사",
+   "level": "사원",
+   "topics": [
+    "직무전문성",
+    "리더십",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790019400000,
+   "id": "s005"
+  },
+  {
+   "dept": "경영지원",
+   "level": "사원",
+   "topics": [
+    "데이터·AI 활용",
+    "커리어 개발"
+   ],
+   "format": "오프라인 집합",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790023000000,
+   "id": "s006"
+  },
+  {
+   "dept": "생산",
+   "level": "부장",
+   "topics": [
+    "조직문화",
+    "커뮤니케이션",
+    "데이터·AI 활용"
+   ],
+   "format": "블렌디드",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790026600000,
+   "id": "s007"
+  },
+  {
+   "dept": "영업",
+   "level": "과장",
+   "topics": [
+    "직무전문성",
+    "디지털 협업툴"
+   ],
+   "format": "이러닝",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790030200000,
+   "id": "s008"
+  },
+  {
+   "dept": "생산",
+   "level": "과장",
+   "topics": [
+    "조직문화",
+    "커리어 개발"
+   ],
+   "format": "온라인 라이브",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790033800000,
+   "id": "s009"
+  },
+  {
+   "dept": "인사",
+   "level": "과장",
+   "topics": [
+    "데이터·AI 활용",
+    "리더십"
+   ],
+   "format": "블렌디드",
+   "timing": "4분기",
+   "comment": "부서 간 협업 방식 개선",
+   "createdAt": 1790037400000,
+   "id": "s010"
+  },
+  {
+   "dept": "영업",
+   "level": "사원",
+   "topics": [
+    "리더십",
+    "커리어 개발",
+    "커뮤니케이션"
+   ],
+   "format": "블렌디드",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790041000000,
+   "id": "s011"
+  },
+  {
+   "dept": "IT",
+   "level": "사원",
+   "topics": [
+    "디지털 협업툴",
+    "리더십",
+    "커뮤니케이션"
+   ],
+   "format": "이러닝",
+   "timing": "4분기",
+   "comment": "부서 간 협업 방식 개선",
+   "createdAt": 1790044600000,
+   "id": "s012"
+  },
+  {
+   "dept": "생산",
+   "level": "과장",
+   "topics": [
+    "리더십",
+    "커뮤니케이션"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "사내 경력경로가 궁금합니다",
+   "createdAt": 1790048200000,
+   "id": "s013"
+  },
+  {
+   "dept": "경영지원",
+   "level": "대리",
+   "topics": [
+    "커뮤니케이션",
+    "커리어 개발"
+   ],
+   "format": "온라인 라이브",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790051800000,
+   "id": "s014"
+  },
+  {
+   "dept": "생산",
+   "level": "사원",
+   "topics": [
+    "디지털 협업툴",
+    "커리어 개발"
+   ],
+   "format": "블렌디드",
+   "timing": "4분기",
+   "comment": "보고서 작성 역량이 필요합니다",
+   "createdAt": 1790055400000,
+   "id": "s015"
+  },
+  {
+   "dept": "인사",
+   "level": "차장",
+   "topics": [
+    "디지털 협업툴",
+    "커리어 개발",
+    "커뮤니케이션"
+   ],
+   "format": "블렌디드",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790059000000,
+   "id": "s016"
+  },
+  {
+   "dept": "생산",
+   "level": "차장",
+   "topics": [
+    "데이터·AI 활용",
+    "커리어 개발",
+    "직무전문성"
+   ],
+   "format": "온라인 라이브",
+   "timing": "1분기",
+   "comment": "사내 경력경로가 궁금합니다",
+   "createdAt": 1790062600000,
+   "id": "s017"
+  },
+  {
+   "dept": "인사",
+   "level": "사원",
+   "topics": [
+    "디지털 협업툴",
+    "조직문화"
+   ],
+   "format": "온라인 라이브",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790066200000,
+   "id": "s018"
+  },
+  {
+   "dept": "IT",
+   "level": "대리",
+   "topics": [
+    "데이터·AI 활용",
+    "직무전문성"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790069800000,
+   "id": "s019"
+  },
+  {
+   "dept": "영업",
+   "level": "사원",
+   "topics": [
+    "데이터·AI 활용",
+    "리더십",
+    "커뮤니케이션"
+   ],
+   "format": "온라인 라이브",
+   "timing": "1분기",
+   "comment": "사내 경력경로가 궁금합니다",
+   "createdAt": 1790073400000,
+   "id": "s020"
+  },
+  {
+   "dept": "영업",
+   "level": "대리",
+   "topics": [
+    "커뮤니케이션",
+    "리더십",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790077000000,
+   "id": "s021"
+  },
+  {
+   "dept": "R&D",
+   "level": "사원",
+   "topics": [
+    "조직문화",
+    "커리어 개발"
+   ],
+   "format": "블렌디드",
+   "timing": "4분기",
+   "comment": "부서 간 협업 방식 개선",
+   "createdAt": 1790080600000,
+   "id": "s022"
+  },
+  {
+   "dept": "인사",
+   "level": "사원",
+   "topics": [
+    "데이터·AI 활용",
+    "커뮤니케이션",
+    "리더십"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790084200000,
+   "id": "s023"
+  },
+  {
+   "dept": "인사",
+   "level": "과장",
+   "topics": [
+    "커뮤니케이션",
+    "디지털 협업툴",
+    "조직문화"
+   ],
+   "format": "오프라인 집합",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790087800000,
+   "id": "s024"
+  },
+  {
+   "dept": "경영지원",
+   "level": "사원",
+   "topics": [
+    "조직문화",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790091400000,
+   "id": "s025"
+  },
+  {
+   "dept": "R&D",
+   "level": "차장",
+   "topics": [
+    "커뮤니케이션",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790095000000,
+   "id": "s026"
+  },
+  {
+   "dept": "인사",
+   "level": "과장",
+   "topics": [
+    "직무전문성",
+    "디지털 협업툴",
+    "커리어 개발"
+   ],
+   "format": "온라인 라이브",
+   "timing": "2분기",
+   "comment": "팀원 면담 스킬을 배우고 싶어요",
+   "createdAt": 1790098600000,
+   "id": "s027"
+  },
+  {
+   "dept": "인사",
+   "level": "사원",
+   "topics": [
+    "커뮤니케이션",
+    "조직문화"
+   ],
+   "format": "이러닝",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790102200000,
+   "id": "s028"
+  },
+  {
+   "dept": "인사",
+   "level": "과장",
+   "topics": [
+    "리더십",
+    "조직문화",
+    "디지털 협업툴"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790105800000,
+   "id": "s029"
+  },
+  {
+   "dept": "생산",
+   "level": "과장",
+   "topics": [
+    "데이터·AI 활용",
+    "디지털 협업툴"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790109400000,
+   "id": "s030"
+  },
+  {
+   "dept": "R&D",
+   "level": "사원",
+   "topics": [
+    "리더십",
+    "커뮤니케이션"
+   ],
+   "format": "이러닝",
+   "timing": "1분기",
+   "comment": "팀원 면담 스킬을 배우고 싶어요",
+   "createdAt": 1790113000000,
+   "id": "s031"
+  },
+  {
+   "dept": "마케팅",
+   "level": "사원",
+   "topics": [
+    "커뮤니케이션",
+    "커리어 개발"
+   ],
+   "format": "블렌디드",
+   "timing": "1분기",
+   "comment": "보고서 작성 역량이 필요합니다",
+   "createdAt": 1790116600000,
+   "id": "s032"
+  },
+  {
+   "dept": "생산",
+   "level": "부장",
+   "topics": [
+    "커리어 개발",
+    "직무전문성"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "AI로 반복 업무를 줄이고 싶습니다",
+   "createdAt": 1790090000000,
+   "id": "s033"
+  },
+  {
+   "dept": "인사",
+   "level": "사원",
+   "topics": [
+    "직무전문성",
+    "커리어 개발",
+    "커뮤니케이션"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790093600000,
+   "id": "s034"
+  },
+  {
+   "dept": "R&D",
+   "level": "부장",
+   "topics": [
+    "데이터·AI 활용",
+    "리더십",
+    "커리어 개발"
+   ],
+   "format": "온라인 라이브",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790097200000,
+   "id": "s035"
+  },
+  {
+   "dept": "생산",
+   "level": "대리",
+   "topics": [
+    "직무전문성",
+    "디지털 협업툴"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790100800000,
+   "id": "s036"
+  },
+  {
+   "dept": "경영지원",
+   "level": "차장",
+   "topics": [
+    "리더십",
+    "조직문화",
+    "디지털 협업툴"
+   ],
+   "format": "오프라인 집합",
+   "timing": "3분기",
+   "comment": "후배 육성 방법을 배우고 싶어요",
+   "createdAt": 1790104400000,
+   "id": "s037"
+  },
+  {
+   "dept": "인사",
+   "level": "대리",
+   "topics": [
+    "조직문화",
+    "커뮤니케이션"
+   ],
+   "format": "블렌디드",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790108000000,
+   "id": "s038"
+  },
+  {
+   "dept": "인사",
+   "level": "부장",
+   "topics": [
+    "디지털 협업툴",
+    "리더십",
+    "커뮤니케이션"
+   ],
+   "format": "온라인 라이브",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790111600000,
+   "id": "s039"
+  },
+  {
+   "dept": "영업",
+   "level": "과장",
+   "topics": [
+    "직무전문성",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "4분기",
+   "comment": "후배 육성 방법을 배우고 싶어요",
+   "createdAt": 1790115200000,
+   "id": "s040"
+  },
+  {
+   "dept": "인사",
+   "level": "과장",
+   "topics": [
+    "커리어 개발",
+    "커뮤니케이션"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790118800000,
+   "id": "s041"
+  },
+  {
+   "dept": "IT",
+   "level": "부장",
+   "topics": [
+    "커리어 개발",
+    "직무전문성",
+    "커뮤니케이션"
+   ],
+   "format": "온라인 라이브",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790122400000,
+   "id": "s042"
+  },
+  {
+   "dept": "경영지원",
+   "level": "사원",
+   "topics": [
+    "데이터·AI 활용",
+    "조직문화"
+   ],
+   "format": "이러닝",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790126000000,
+   "id": "s043"
+  },
+  {
+   "dept": "영업",
+   "level": "대리",
+   "topics": [
+    "커뮤니케이션",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "4분기",
+   "comment": "실무 사례 중심이면 좋겠습니다",
+   "createdAt": 1790129600000,
+   "id": "s044"
+  },
+  {
+   "dept": "IT",
+   "level": "사원",
+   "topics": [
+    "데이터·AI 활용",
+    "직무전문성",
+    "커리어 개발"
+   ],
+   "format": "이러닝",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790133200000,
+   "id": "s045"
+  },
+  {
+   "dept": "IT",
+   "level": "대리",
+   "topics": [
+    "디지털 협업툴",
+    "리더십",
+    "조직문화"
+   ],
+   "format": "블렌디드",
+   "timing": "2분기",
+   "comment": "후배 육성 방법을 배우고 싶어요",
+   "createdAt": 1790136800000,
+   "id": "s046"
+  },
+  {
+   "dept": "인사",
+   "level": "대리",
+   "topics": [
+    "커리어 개발",
+    "직무전문성",
+    "리더십"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790140400000,
+   "id": "s047"
+  },
+  {
+   "dept": "생산",
+   "level": "과장",
+   "topics": [
+    "디지털 협업툴",
+    "커리어 개발",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790144000000,
+   "id": "s048"
+  },
+  {
+   "dept": "IT",
+   "level": "대리",
+   "topics": [
+    "커뮤니케이션",
+    "법정의무교육",
+    "커리어 개발"
+   ],
+   "format": "오프라인 집합",
+   "timing": "3분기",
+   "comment": "실무 사례 중심이면 좋겠습니다",
+   "createdAt": 1790147600000,
+   "id": "s049"
+  },
+  {
+   "dept": "경영지원",
+   "level": "차장",
+   "topics": [
+    "리더십",
+    "직무전문성",
+    "조직문화"
+   ],
+   "format": "이러닝",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790151200000,
+   "id": "s050"
+  },
+  {
+   "dept": "생산",
+   "level": "대리",
+   "topics": [
+    "리더십",
+    "조직문화",
+    "디지털 협업툴"
+   ],
+   "format": "블렌디드",
+   "timing": "1분기",
+   "comment": "실무 사례 중심이면 좋겠습니다",
+   "createdAt": 1790154800000,
+   "id": "s051"
+  },
+  {
+   "dept": "경영지원",
+   "level": "사원",
+   "topics": [
+    "리더십",
+    "조직문화"
+   ],
+   "format": "이러닝",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790158400000,
+   "id": "s052"
+  },
+  {
+   "dept": "영업",
+   "level": "대리",
+   "topics": [
+    "커뮤니케이션",
+    "조직문화",
+    "직무전문성"
+   ],
+   "format": "이러닝",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790162000000,
+   "id": "s053"
+  },
+  {
+   "dept": "R&D",
+   "level": "과장",
+   "topics": [
+    "데이터·AI 활용",
+    "디지털 협업툴",
+    "직무전문성"
+   ],
+   "format": "오프라인 집합",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790165600000,
+   "id": "s054"
+  },
+  {
+   "dept": "마케팅",
+   "level": "대리",
+   "topics": [
+    "커리어 개발",
+    "커뮤니케이션",
+    "디지털 협업툴"
+   ],
+   "format": "이러닝",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790169200000,
+   "id": "s055"
+  },
+  {
+   "dept": "R&D",
+   "level": "사원",
+   "topics": [
+    "데이터·AI 활용",
+    "커뮤니케이션",
+    "조직문화"
+   ],
+   "format": "온라인 라이브",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790172800000,
+   "id": "s056"
+  },
+  {
+   "dept": "경영지원",
+   "level": "부장",
+   "topics": [
+    "법정의무교육",
+    "직무전문성",
+    "디지털 협업툴"
+   ],
+   "format": "오프라인 집합",
+   "timing": "4분기",
+   "comment": "실무 사례 중심이면 좋겠습니다",
+   "createdAt": 1790176400000,
+   "id": "s057"
+  },
+  {
+   "dept": "영업",
+   "level": "사원",
+   "topics": [
+    "직무전문성",
+    "커리어 개발",
+    "데이터·AI 활용"
+   ],
+   "format": "오프라인 집합",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790180000000,
+   "id": "s058"
+  },
+  {
+   "dept": "생산",
+   "level": "과장",
+   "topics": [
+    "커리어 개발",
+    "데이터·AI 활용",
+    "커뮤니케이션"
+   ],
+   "format": "이러닝",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790183600000,
+   "id": "s059"
+  },
+  {
+   "dept": "R&D",
+   "level": "사원",
+   "topics": [
+    "조직문화",
+    "디지털 협업툴",
+    "법정의무교육"
+   ],
+   "format": "오프라인 집합",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790187200000,
+   "id": "s060"
+  },
+  {
+   "dept": "IT",
+   "level": "과장",
+   "topics": [
+    "데이터·AI 활용",
+    "리더십",
+    "직무전문성"
+   ],
+   "format": "블렌디드",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790190800000,
+   "id": "s061"
+  },
+  {
+   "dept": "마케팅",
+   "level": "과장",
+   "topics": [
+    "커리어 개발",
+    "리더십"
+   ],
+   "format": "이러닝",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790194400000,
+   "id": "s062"
+  },
+  {
+   "dept": "영업",
+   "level": "차장",
+   "topics": [
+    "데이터·AI 활용",
+    "커뮤니케이션",
+    "디지털 협업툴"
+   ],
+   "format": "온라인 라이브",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790198000000,
+   "id": "s063"
+  },
+  {
+   "dept": "인사",
+   "level": "대리",
+   "topics": [
+    "커리어 개발",
+    "리더십",
+    "커뮤니케이션"
+   ],
+   "format": "블렌디드",
+   "timing": "2분기",
+   "comment": "실무 사례 중심이면 좋겠습니다",
+   "createdAt": 1790201600000,
+   "id": "s064"
+  },
+  {
+   "dept": "R&D",
+   "level": "과장",
+   "topics": [
+    "커리어 개발",
+    "디지털 협업툴",
+    "리더십"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790205200000,
+   "id": "s065"
+  },
+  {
+   "dept": "생산",
+   "level": "대리",
+   "topics": [
+    "디지털 협업툴",
+    "커리어 개발"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790208800000,
+   "id": "s066"
+  },
+  {
+   "dept": "영업",
+   "level": "과장",
+   "topics": [
+    "데이터·AI 활용",
+    "직무전문성",
+    "커뮤니케이션"
+   ],
+   "format": "오프라인 집합",
+   "timing": "1분기",
+   "comment": "",
+   "createdAt": 1790212400000,
+   "id": "s067"
+  },
+  {
+   "dept": "R&D",
+   "level": "차장",
+   "topics": [
+    "커리어 개발",
+    "데이터·AI 활용"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790216000000,
+   "id": "s068"
+  },
+  {
+   "dept": "마케팅",
+   "level": "사원",
+   "topics": [
+    "리더십",
+    "커리어 개발"
+   ],
+   "format": "블렌디드",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790219600000,
+   "id": "s069"
+  },
+  {
+   "dept": "생산",
+   "level": "사원",
+   "topics": [
+    "데이터·AI 활용",
+    "직무전문성"
+   ],
+   "format": "오프라인 집합",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790223200000,
+   "id": "s070"
+  },
+  {
+   "dept": "인사",
+   "level": "대리",
+   "topics": [
+    "리더십",
+    "직무전문성",
+    "데이터·AI 활용"
+   ],
+   "format": "이러닝",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790226800000,
+   "id": "s071"
+  },
+  {
+   "dept": "IT",
+   "level": "차장",
+   "topics": [
+    "직무전문성",
+    "디지털 협업툴",
+    "데이터·AI 활용"
+   ],
+   "format": "블렌디드",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790230400000,
+   "id": "s072"
+  },
+  {
+   "dept": "생산",
+   "level": "차장",
+   "topics": [
+    "법정의무교육",
+    "커리어 개발"
+   ],
+   "format": "블렌디드",
+   "timing": "4분기",
+   "comment": "실무 사례 중심이면 좋겠습니다",
+   "createdAt": 1790234000000,
+   "id": "s073"
+  },
+  {
+   "dept": "생산",
+   "level": "사원",
+   "topics": [
+    "직무전문성",
+    "리더십",
+    "데이터·AI 활용"
+   ],
+   "format": "오프라인 집합",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790237600000,
+   "id": "s074"
+  },
+  {
+   "dept": "인사",
+   "level": "사원",
+   "topics": [
+    "커리어 개발",
+    "조직문화"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "글로벌 법인과 협업하는 법",
+   "createdAt": 1790241200000,
+   "id": "s075"
+  },
+  {
+   "dept": "마케팅",
+   "level": "과장",
+   "topics": [
+    "직무전문성",
+    "리더십",
+    "커뮤니케이션"
+   ],
+   "format": "온라인 라이브",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790244800000,
+   "id": "s076"
+  },
+  {
+   "dept": "생산",
+   "level": "과장",
+   "topics": [
+    "리더십",
+    "조직문화"
+   ],
+   "format": "블렌디드",
+   "timing": "2분기",
+   "comment": "",
+   "createdAt": 1790248400000,
+   "id": "s077"
+  },
+  {
+   "dept": "생산",
+   "level": "대리",
+   "topics": [
+    "커리어 개발",
+    "직무전문성"
+   ],
+   "format": "오프라인 집합",
+   "timing": "4분기",
+   "comment": "",
+   "createdAt": 1790252000000,
+   "id": "s078"
+  },
+  {
+   "dept": "인사",
+   "level": "대리",
+   "topics": [
+    "디지털 협업툴",
+    "데이터·AI 활용",
+    "커뮤니케이션"
+   ],
+   "format": "온라인 라이브",
+   "timing": "4분기",
+   "comment": "글로벌 법인과 협업하는 법",
+   "createdAt": 1790255600000,
+   "id": "s079"
+  },
+  {
+   "dept": "인사",
+   "level": "사원",
+   "topics": [
+    "리더십",
+    "커리어 개발",
+    "디지털 협업툴"
+   ],
+   "format": "블렌디드",
+   "timing": "4분기",
+   "comment": "후배 육성 방법을 배우고 싶어요",
+   "createdAt": 1790259200000,
+   "id": "s080"
+  },
+  {
+   "dept": "경영지원",
+   "level": "사원",
+   "topics": [
+    "데이터·AI 활용",
+    "직무전문성",
+    "조직문화"
+   ],
+   "format": "이러닝",
+   "timing": "3분기",
+   "comment": "",
+   "createdAt": 1790262800000,
+   "id": "s081"
+  },
+  {
+   "dept": "IT",
+   "level": "과장",
+   "topics": [
+    "데이터·AI 활용",
+    "디지털 협업툴",
+    "커리어 개발"
+   ],
+   "format": "이러닝",
+   "timing": "1분기",
+   "comment": "AI로 반복 업무를 줄이고 싶습니다",
+   "createdAt": 1790266400000,
+   "id": "s082"
+  }
+ ],
+ "feedback": [
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 5,
+   "nps": 8,
+   "comment": "바로 써먹을 수 있는 내용",
+   "createdAt": 1790009060000,
+   "id": "f001"
+  },
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 4,
+   "nps": 9,
+   "comment": "실습 시간이 더 있었으면",
+   "createdAt": 1790009120000,
+   "id": "f002"
+  },
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 4,
+   "nps": 10,
+   "comment": "강사님 설명이 명확했습니다",
+   "createdAt": 1790009180000,
+   "id": "f003"
+  },
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 4,
+   "nps": 5,
+   "comment": "",
+   "createdAt": 1790009240000,
+   "id": "f004"
+  },
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 5,
+   "nps": 6,
+   "comment": "실습 시간이 더 있었으면",
+   "createdAt": 1790009300000,
+   "id": "f005"
+  },
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 5,
+   "nps": 7,
+   "comment": "사례 중심이라 좋았습니다",
+   "createdAt": 1790009360000,
+   "id": "f006"
+  },
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 5,
+   "nps": 8,
+   "comment": "",
+   "createdAt": 1790009420000,
+   "id": "f007"
+  },
+  {
+   "courseId": "c01",
+   "score": 4,
+   "apply": 5,
+   "nps": 10,
+   "comment": "",
+   "createdAt": 1790009480000,
+   "id": "f008"
+  },
+  {
+   "courseId": "c01",
+   "score": 3,
+   "apply": 5,
+   "nps": 10,
+   "comment": "바로 써먹을 수 있는 내용",
+   "createdAt": 1790009540000,
+   "id": "f009"
+  },
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 4,
+   "nps": 7,
+   "comment": "실습 시간이 더 있었으면",
+   "createdAt": 1790009600000,
+   "id": "f010"
+  },
+  {
+   "courseId": "c01",
+   "score": 4,
+   "apply": 5,
+   "nps": 6,
+   "comment": "",
+   "createdAt": 1790009660000,
+   "id": "f011"
+  },
+  {
+   "courseId": "c01",
+   "score": 4,
+   "apply": 4,
+   "nps": 10,
+   "comment": "",
+   "createdAt": 1790009720000,
+   "id": "f012"
+  },
+  {
+   "courseId": "c01",
+   "score": 4,
+   "apply": 4,
+   "nps": 10,
+   "comment": "실습 시간이 더 있었으면",
+   "createdAt": 1790009780000,
+   "id": "f013"
+  },
+  {
+   "courseId": "c01",
+   "score": 5,
+   "apply": 4,
+   "nps": 7,
+   "comment": "",
+   "createdAt": 1790009840000,
+   "id": "f014"
+  },
+  {
+   "courseId": "c01",
+   "score": 4,
+   "apply": 4,
+   "nps": 9,
+   "comment": "실습 시간이 더 있었으면",
+   "createdAt": 1790009900000,
+   "id": "f015"
+  },
+  {
+   "courseId": "c02",
+   "score": 4,
+   "apply": 4,
+   "nps": 9,
+   "comment": "강사님 설명이 명확했습니다",
+   "createdAt": 1790009960000,
+   "id": "f016"
+  },
+  {
+   "courseId": "c02",
+   "score": 3,
+   "apply": 2,
+   "nps": 10,
+   "comment": "바로 써먹을 수 있는 내용",
+   "createdAt": 1790010020000,
+   "id": "f017"
+  },
+  {
+   "courseId": "c02",
+   "score": 3,
+   "apply": 4,
+   "nps": 10,
+   "comment": "강사님 설명이 명확했습니다",
+   "createdAt": 1790010080000,
+   "id": "f018"
+  },
+  {
+   "courseId": "c02",
+   "score": 4,
+   "apply": 3,
+   "nps": 8,
+   "comment": "",
+   "createdAt": 1790010140000,
+   "id": "f019"
+  },
+  {
+   "courseId": "c02",
+   "score": 5,
+   "apply": 3,
+   "nps": 7,
+   "comment": "사례 중심이라 좋았습니다",
+   "createdAt": 1790010200000,
+   "id": "f020"
+  },
+  {
+   "courseId": "c02",
+   "score": 3,
+   "apply": 3,
+   "nps": 5,
+   "comment": "",
+   "createdAt": 1790010260000,
+   "id": "f021"
+  },
+  {
+   "courseId": "c02",
+   "score": 5,
+   "apply": 2,
+   "nps": 7,
+   "comment": "",
+   "createdAt": 1790010320000,
+   "id": "f022"
+  },
+  {
+   "courseId": "c02",
+   "score": 3,
+   "apply": 3,
+   "nps": 8,
+   "comment": "바로 써먹을 수 있는 내용",
+   "createdAt": 1790010380000,
+   "id": "f023"
+  },
+  {
+   "courseId": "c02",
+   "score": 5,
+   "apply": 3,
+   "nps": 5,
+   "comment": "강사님 설명이 명확했습니다",
+   "createdAt": 1790010440000,
+   "id": "f024"
+  },
+  {
+   "courseId": "c02",
+   "score": 4,
+   "apply": 3,
+   "nps": 7,
+   "comment": "",
+   "createdAt": 1790010500000,
+   "id": "f025"
+  },
+  {
+   "courseId": "c02",
+   "score": 3,
+   "apply": 3,
+   "nps": 8,
+   "comment": "",
+   "createdAt": 1790010560000,
+   "id": "f026"
+  },
+  {
+   "courseId": "c02",
+   "score": 3,
+   "apply": 3,
+   "nps": 6,
+   "comment": "강사님 설명이 명확했습니다",
+   "createdAt": 1790010620000,
+   "id": "f027"
+  },
+  {
+   "id": "f059",
+   "courseId": "c03",
+   "score": 3,
+   "apply": 3,
+   "nps": 6,
+   "comment": "내용이 너무 기초적이었습니다",
+   "createdAt": 1793300000000
+  },
+  {
+   "id": "f060",
+   "courseId": "c03",
+   "score": 4,
+   "apply": 3,
+   "nps": 7,
+   "comment": "",
+   "createdAt": 1793300060000
+  },
+  {
+   "id": "f061",
+   "courseId": "c03",
+   "score": 3,
+   "apply": 2,
+   "nps": 5,
+   "comment": "실습 PC 환경이 불안정했어요",
+   "createdAt": 1793300120000
+  },
+  {
+   "id": "f062",
+   "courseId": "c03",
+   "score": 4,
+   "apply": 4,
+   "nps": 8,
+   "comment": "",
+   "createdAt": 1793300180000
+  }
+ ]
+}
